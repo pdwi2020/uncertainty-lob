@@ -1,0 +1,60 @@
+# ---- macOS / ExFAT junk ----
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.python-version
+
+# ---- Secrets / local config (never commit) ----
+.env
+*.key
+*.pem
+kaggle.json
+.kaggle/
+
+# ---- Large data, model weights, intermediate tensors (NOT redistributed) ----
+data/
+datasets/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.parquet
+*.h5
+*.hdf5
+*.log
+
+# ---- The manuscript: this is a CODE repo, not the paper ----
+paper/
+literature/
+references/
+report_figures/
+figures/
+*.tex
+*.bib
+*.pdf
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.synctex.gz
+
+# ---- Keep small text results behind the tables (results/ is tracked;
+#      only the binary/log artefacts above are ignored) ----
+!results/**/*.json
+!results/**/*.csv
+!results/**/*.md

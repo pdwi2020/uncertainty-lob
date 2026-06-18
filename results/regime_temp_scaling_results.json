@@ -1,0 +1,326 @@
+{
+  "deeplob": {
+    "split": "val_calib\u2192val_eval",
+    "ladder": {
+      "raw": {
+        "T": null,
+        "metrics": {
+          "acc": 0.8644,
+          "ece": 0.0547,
+          "nll": 0.4732,
+          "brier": 0.2103
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8637,
+            "ece": 0.0544,
+            "nll": 0.4724,
+            "brier": 0.2111,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8787,
+            "ece": 0.0602,
+            "nll": 0.4901,
+            "brier": 0.1925,
+            "n": 7633
+          }
+        }
+      },
+      "global_T": {
+        "T": 1.6679,
+        "metrics": {
+          "acc": 0.8644,
+          "ece": 0.0197,
+          "nll": 0.3989,
+          "brier": 0.2052
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8637,
+            "ece": 0.0198,
+            "nll": 0.3996,
+            "brier": 0.206,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8787,
+            "ece": 0.0239,
+            "nll": 0.383,
+            "brier": 0.1866,
+            "n": 7633
+          }
+        }
+      },
+      "regime_T": {
+        "T_low": 1.6727,
+        "T_high": 1.6241,
+        "metrics": {
+          "acc": 0.8644,
+          "ece": 0.0199,
+          "nll": 0.3989,
+          "brier": 0.2052
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8637,
+            "ece": 0.02,
+            "nll": 0.3995,
+            "brier": 0.2061,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8787,
+            "ece": 0.0252,
+            "nll": 0.3856,
+            "brier": 0.1866,
+            "n": 7633
+          }
+        }
+      }
+    }
+  },
+  "tcn": {
+    "split": "val_calib\u2192val_eval",
+    "ladder": {
+      "raw": {
+        "T": null,
+        "metrics": {
+          "acc": 0.8325,
+          "ece": 0.0146,
+          "nll": 0.4474,
+          "brier": 0.2429
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8313,
+            "ece": 0.0148,
+            "nll": 0.4486,
+            "brier": 0.2441,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8577,
+            "ece": 0.0164,
+            "nll": 0.42,
+            "brier": 0.2178,
+            "n": 7633
+          }
+        }
+      },
+      "global_T": {
+        "T": 1.1102,
+        "metrics": {
+          "acc": 0.8325,
+          "ece": 0.03,
+          "nll": 0.4501,
+          "brier": 0.2448
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8313,
+            "ece": 0.0309,
+            "nll": 0.4517,
+            "brier": 0.246,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8577,
+            "ece": 0.0209,
+            "nll": 0.4158,
+            "brier": 0.2185,
+            "n": 7633
+          }
+        }
+      },
+      "regime_T": {
+        "T_low": 1.1125,
+        "T_high": 1.0908,
+        "metrics": {
+          "acc": 0.8325,
+          "ece": 0.0302,
+          "nll": 0.4502,
+          "brier": 0.2448
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8313,
+            "ece": 0.0312,
+            "nll": 0.4518,
+            "brier": 0.2461,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8577,
+            "ece": 0.0196,
+            "nll": 0.4162,
+            "brier": 0.2183,
+            "n": 7633
+          }
+        }
+      }
+    }
+  },
+  "lob_transformer": {
+    "split": "val_calib\u2192val_eval",
+    "ladder": {
+      "raw": {
+        "T": null,
+        "metrics": {
+          "acc": 0.8207,
+          "ece": 0.0308,
+          "nll": 0.4876,
+          "brier": 0.2627
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8203,
+            "ece": 0.03,
+            "nll": 0.4874,
+            "brier": 0.263,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8293,
+            "ece": 0.0477,
+            "nll": 0.4927,
+            "brier": 0.2564,
+            "n": 7633
+          }
+        }
+      },
+      "global_T": {
+        "T": 1.2703,
+        "metrics": {
+          "acc": 0.8207,
+          "ece": 0.0132,
+          "nll": 0.4791,
+          "brier": 0.2612
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8203,
+            "ece": 0.0142,
+            "nll": 0.4796,
+            "brier": 0.2617,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8293,
+            "ece": 0.0138,
+            "nll": 0.4693,
+            "brier": 0.2523,
+            "n": 7633
+          }
+        }
+      },
+      "regime_T": {
+        "T_low": 1.2702,
+        "T_high": 1.2713,
+        "metrics": {
+          "acc": 0.8207,
+          "ece": 0.0132,
+          "nll": 0.4791,
+          "brier": 0.2612
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8203,
+            "ece": 0.0142,
+            "nll": 0.4796,
+            "brier": 0.2617,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8293,
+            "ece": 0.0136,
+            "nll": 0.4692,
+            "brier": 0.2523,
+            "n": 7633
+          }
+        }
+      }
+    }
+  },
+  "cnn_lstm_attention": {
+    "split": "val_calib\u2192val_eval",
+    "ladder": {
+      "raw": {
+        "T": null,
+        "metrics": {
+          "acc": 0.8788,
+          "ece": 0.0414,
+          "nll": 0.4124,
+          "brier": 0.1881
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8784,
+            "ece": 0.0412,
+            "nll": 0.4109,
+            "brier": 0.1884,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8867,
+            "ece": 0.0479,
+            "nll": 0.4457,
+            "brier": 0.1824,
+            "n": 7633
+          }
+        }
+      },
+      "global_T": {
+        "T": 1.5156,
+        "metrics": {
+          "acc": 0.8788,
+          "ece": 0.0191,
+          "nll": 0.3669,
+          "brier": 0.1859
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8784,
+            "ece": 0.0189,
+            "nll": 0.3664,
+            "brier": 0.1862,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8867,
+            "ece": 0.0245,
+            "nll": 0.3768,
+            "brier": 0.1803,
+            "n": 7633
+          }
+        }
+      },
+      "regime_T": {
+        "T_low": 1.5178,
+        "T_high": 1.5,
+        "metrics": {
+          "acc": 0.8788,
+          "ece": 0.0192,
+          "nll": 0.3669,
+          "brier": 0.186
+        },
+        "regime_metrics": {
+          "low_vol": {
+            "acc": 0.8784,
+            "ece": 0.019,
+            "nll": 0.3664,
+            "brier": 0.1862,
+            "n": 161354
+          },
+          "high_vol": {
+            "acc": 0.8867,
+            "ece": 0.0251,
+            "nll": 0.3775,
+            "brier": 0.1802,
+            "n": 7633
+          }
+        }
+      }
+    }
+  }
+}

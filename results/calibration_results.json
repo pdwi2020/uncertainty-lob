@@ -1,0 +1,54 @@
+{
+  "deeplob": {
+    "model": "deeplob",
+    "horizon": 10,
+    "temperature": 1.5992172956466675,
+    "ece_before_ts": 0.039548566343047334,
+    "ece_after_ts": 0.016905317049239473,
+    "ece_reduction_pct": 57.254285882689835,
+    "mc_dropout_acc": 0.9215625,
+    "mc_mean_entropy": 0.16848140954971313,
+    "mc_std_entropy": 0.26278769969940186,
+    "mc_mean_epistemic": 0.01500587910413742,
+    "mc_n_samples": 30
+  },
+  "tcn": {
+    "model": "tcn",
+    "horizon": 10,
+    "temperature": 1.200044870376587,
+    "ece_before_ts": 0.010100600157566132,
+    "ece_after_ts": 0.03770081939738717,
+    "ece_reduction_pct": -273.2532575887887,
+    "mc_dropout_acc": 0.868125,
+    "mc_mean_entropy": 0.591260552406311,
+    "mc_std_entropy": 0.283834844827652,
+    "mc_mean_epistemic": 0.10272928327322006,
+    "mc_n_samples": 30
+  },
+  "lob_transformer": {
+    "model": "lob_transformer",
+    "horizon": 10,
+    "temperature": 1.3509023189544678,
+    "ece_before_ts": 0.02589113714598163,
+    "ece_after_ts": 0.02288787493265939,
+    "ece_reduction_pct": 11.59957627503734,
+    "mc_dropout_acc": 0.848125,
+    "mc_mean_entropy": 0.45542263984680176,
+    "mc_std_entropy": 0.2955593764781952,
+    "mc_mean_epistemic": 0.024861326441168785,
+    "mc_n_samples": 30
+  },
+  "cnn_lstm_attention": {
+    "model": "cnn_lstm_attention",
+    "horizon": 10,
+    "temperature": 1.5236363410949707,
+    "ece_before_ts": 0.030977415682057044,
+    "ece_after_ts": 0.017171078590291496,
+    "ece_reduction_pct": 44.56904084220786,
+    "mc_dropout_acc": 0.9315625,
+    "mc_mean_entropy": 0.21197253465652466,
+    "mc_std_entropy": 0.29755353927612305,
+    "mc_mean_epistemic": 0.005018290132284164,
+    "mc_n_samples": 30
+  }
+}

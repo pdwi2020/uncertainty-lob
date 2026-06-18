@@ -1,0 +1,8 @@
+θ source,θ,Coverage (C),Selective Acc.,Baseline Acc.,Note
+Test (leaked — invalid),0.99,0.566,0.9743,0.8753,θ fit on test; overestimates
+Val (corrected),0.99,0.566,0.9743,0.8753,θ fit on val; valid estimate
+Val-fit (cov50),0.99,0.566,0.9743,0.8753,
+Val-fit (cov60),0.98,0.640,0.9675,0.8753,
+Val-fit (cov70),0.97,0.681,0.9627,0.8753,
+Val-fit (cov80),0.92,0.775,0.9480,0.8753,
+Val-fit (cov90),0.75,0.887,0.9197,0.8753,

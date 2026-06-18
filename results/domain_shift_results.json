@@ -1,0 +1,70 @@
+{
+  "deeplob": {
+    "model": "deeplob",
+    "dataset": "bybit_btcusdt",
+    "n_samples": 463255,
+    "n_days": 3,
+    "acc": 0.3634,
+    "f1_macro": 0.1784,
+    "f1_weighted": 0.5326,
+    "kappa": 0.0004,
+    "fi2010_test_acc": 0.8735,
+    "acc_drop_pct": 51.0,
+    "label_distribution": [
+      125,
+      462895,
+      235
+    ]
+  },
+  "tcn": {
+    "model": "tcn",
+    "dataset": "bybit_btcusdt",
+    "n_samples": 463255,
+    "n_days": 3,
+    "acc": 0.4861,
+    "f1_macro": 0.2187,
+    "f1_weighted": 0.6537,
+    "kappa": 0.0005,
+    "fi2010_test_acc": 0.8518,
+    "acc_drop_pct": 36.57,
+    "label_distribution": [
+      125,
+      462895,
+      235
+    ]
+  },
+  "lob_transformer": {
+    "model": "lob_transformer",
+    "dataset": "bybit_btcusdt",
+    "n_samples": 463255,
+    "n_days": 3,
+    "acc": 0.4263,
+    "f1_macro": 0.1999,
+    "f1_weighted": 0.5973,
+    "kappa": 0.0003,
+    "fi2010_test_acc": 0.8355,
+    "acc_drop_pct": 40.92,
+    "label_distribution": [
+      125,
+      462895,
+      235
+    ]
+  },
+  "cnn_lstm_attention": {
+    "model": "cnn_lstm_attention",
+    "dataset": "bybit_btcusdt",
+    "n_samples": 463255,
+    "n_days": 3,
+    "acc": 0.3648,
+    "f1_macro": 0.1789,
+    "f1_weighted": 0.5341,
+    "kappa": 0.0006,
+    "fi2010_test_acc": 0.8762,
+    "acc_drop_pct": 51.14,
+    "label_distribution": [
+      125,
+      462895,
+      235
+    ]
+  }
+}

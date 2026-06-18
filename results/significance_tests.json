@@ -1,0 +1,42 @@
+{
+  "split": "val",
+  "test": "mcnemar_accuracy",
+  "pairs": {
+    "deeplob__vs__tcn": {
+      "b": 23479,
+      "c": 14730,
+      "chi2": 2002.865921641498,
+      "p_value": 0.0
+    },
+    "deeplob__vs__lob_transformer": {
+      "b": 30645,
+      "c": 14517,
+      "chi2": 5758.826646295558,
+      "p_value": 0.0
+    },
+    "deeplob__vs__cnn_lstm_attention": {
+      "b": 16088,
+      "c": 17368,
+      "chi2": 48.89529531324725,
+      "p_value": 2.699976025483906e-12
+    },
+    "tcn__vs__lob_transformer": {
+      "b": 22910,
+      "c": 15531,
+      "chi2": 1416.063161728363,
+      "p_value": 6.790222644243e-310
+    },
+    "tcn__vs__cnn_lstm_attention": {
+      "b": 13758,
+      "c": 23787,
+      "chi2": 2678.4068184844855,
+      "p_value": 0.0
+    },
+    "lob_transformer__vs__cnn_lstm_attention": {
+      "b": 13124,
+      "c": 30532,
+      "chi2": 6940.710303280191,
+      "p_value": 0.0
+    }
+  }
+}

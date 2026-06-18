@@ -1,0 +1,13 @@
+Symbol,Model,LAC_cov,LAC_gap,Learned_cov,Learned_gap,gap_reduction_%,ACI_cov,AgACI_cov
+BTCUSDT,deeplob,0.899,0.000,0.000,0.000,+0.0,0.720,0.768
+BTCUSDT,tcn,0.885,0.000,0.000,0.000,+0.0,0.833,0.875
+BTCUSDT,lob_transformer,0.890,0.000,0.000,0.000,+0.0,0.849,0.893
+BTCUSDT,cnn_lstm_attention,0.887,0.000,0.000,0.000,+0.0,0.765,0.817
+ETHUSDT,deeplob,0.904,0.000,0.000,0.000,+0.0,0.715,0.760
+ETHUSDT,tcn,0.863,0.000,0.000,0.000,+0.0,0.811,0.859
+ETHUSDT,lob_transformer,0.892,0.000,0.000,0.000,+0.0,0.850,0.891
+ETHUSDT,cnn_lstm_attention,0.903,0.000,0.000,0.000,+0.0,0.762,0.815
+SOLUSDT,deeplob,0.875,0.209,0.000,0.000,+100.0,0.726,0.764
+SOLUSDT,tcn,0.884,0.116,0.000,0.000,+100.0,0.824,0.869
+SOLUSDT,lob_transformer,0.886,0.114,0.000,0.000,+100.0,0.825,0.878
+SOLUSDT,cnn_lstm_attention,0.863,0.196,0.000,0.000,+100.0,0.766,0.815

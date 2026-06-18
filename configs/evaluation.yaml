@@ -1,0 +1,36 @@
+primary_horizon: 10
+all_horizons: [1, 2, 3, 5, 10]
+metrics:
+  - accuracy
+  - f1_macro
+  - f1_weighted
+  - cohen_kappa
+  - precision_macro
+  - recall_macro
+
+calibration:
+  ece_n_bins: 10
+  temperature_scaling_lr: 0.01
+  temperature_scaling_iters: 50
+  mc_dropout_samples: 20
+
+conformal:
+  alpha: 0.10
+  method: raps
+  regularization_strength: 0.01
+
+regime:
+  hmm_n_components: 2
+  regime_features: [realized_vol_1h, spread, ofi]
+
+domain_shift:
+  source: fi2010
+  target: bybit_btcusdt
+  calib_fraction: 0.10
+  method: domain_adaptive_temperature
+
+market_making:
+  spread_bps: 2
+  inventory_limit: 10
+  ofi_threshold: 0.5
+  adverse_selection_lookback: 10

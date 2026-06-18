@@ -1,0 +1,206 @@
+{
+  "deeplob": {
+    "split": "val_calib\u2192val_eval",
+    "alpha": 0.1,
+    "lambda_star": 0.32,
+    "q_hat": 0.4449,
+    "conf_threshold": 0.6,
+    "filters": {
+      "raw": {
+        "trade_coverage": 0.6915,
+        "hit_rate": 0.8535,
+        "pnl_per_trade": 0.707,
+        "sharpe": 1459.5111,
+        "adverse_sel_rate": 0.1372,
+        "high_vol_trade_frac": 0.042,
+        "n_trades": 116852
+      },
+      "confidence": {
+        "trade_coverage": 0.6456,
+        "hit_rate": 0.8817,
+        "pnl_per_trade": 0.7633,
+        "sharpe": 1559.2294,
+        "adverse_sel_rate": 0.1128,
+        "high_vol_trade_frac": 0.0429,
+        "n_trades": 109092
+      },
+      "conformal": {
+        "trade_coverage": 0.5879,
+        "hit_rate": 0.9102,
+        "pnl_per_trade": 0.8203,
+        "sharpe": 1624.5709,
+        "adverse_sel_rate": 0.0798,
+        "high_vol_trade_frac": 0.0421,
+        "n_trades": 99343
+      },
+      "ofi_gate": {
+        "trade_coverage": 0.3128,
+        "hit_rate": 0.9133,
+        "pnl_per_trade": 0.8266,
+        "sharpe": 1046.7865,
+        "adverse_sel_rate": 0.0725,
+        "high_vol_trade_frac": 0.0428,
+        "n_trades": 52857
+      }
+    },
+    "ofi_vs_raw_delta": {
+      "delta_hit_rate": 0.0598,
+      "delta_adverse_sel": -0.0647,
+      "delta_sharpe": -412.7246,
+      "coverage_reduction": 0.3787
+    }
+  },
+  "tcn": {
+    "split": "val_calib\u2192val_eval",
+    "alpha": 0.1,
+    "lambda_star": 0.48,
+    "q_hat": 0.8426,
+    "conf_threshold": 0.6,
+    "filters": {
+      "raw": {
+        "trade_coverage": 0.6935,
+        "hit_rate": 0.8149,
+        "pnl_per_trade": 0.6299,
+        "sharpe": 1237.0438,
+        "adverse_sel_rate": 0.1719,
+        "high_vol_trade_frac": 0.0418,
+        "n_trades": 117188
+      },
+      "confidence": {
+        "trade_coverage": 0.5674,
+        "hit_rate": 0.8838,
+        "pnl_per_trade": 0.7675,
+        "sharpe": 1422.8141,
+        "adverse_sel_rate": 0.1116,
+        "high_vol_trade_frac": 0.0439,
+        "n_trades": 95890
+      },
+      "conformal": {
+        "trade_coverage": 0.638,
+        "hit_rate": 0.8457,
+        "pnl_per_trade": 0.6914,
+        "sharpe": 1330.2651,
+        "adverse_sel_rate": 0.1282,
+        "high_vol_trade_frac": 0.0403,
+        "n_trades": 107812
+      },
+      "ofi_gate": {
+        "trade_coverage": 0.3449,
+        "hit_rate": 0.8418,
+        "pnl_per_trade": 0.6835,
+        "sharpe": 880.1434,
+        "adverse_sel_rate": 0.1304,
+        "high_vol_trade_frac": 0.0411,
+        "n_trades": 58289
+      }
+    },
+    "ofi_vs_raw_delta": {
+      "delta_hit_rate": 0.0269,
+      "delta_adverse_sel": -0.0415,
+      "delta_sharpe": -356.9004,
+      "coverage_reduction": 0.3486
+    }
+  },
+  "lob_transformer": {
+    "split": "val_calib\u2192val_eval",
+    "alpha": 0.1,
+    "lambda_star": 0.36,
+    "q_hat": 0.9043,
+    "conf_threshold": 0.6,
+    "filters": {
+      "raw": {
+        "trade_coverage": 0.69,
+        "hit_rate": 0.8041,
+        "pnl_per_trade": 0.6083,
+        "sharpe": 1175.6683,
+        "adverse_sel_rate": 0.1896,
+        "high_vol_trade_frac": 0.0416,
+        "n_trades": 116603
+      },
+      "confidence": {
+        "trade_coverage": 0.5897,
+        "hit_rate": 0.858,
+        "pnl_per_trade": 0.7159,
+        "sharpe": 1321.5813,
+        "adverse_sel_rate": 0.1386,
+        "high_vol_trade_frac": 0.0427,
+        "n_trades": 99654
+      },
+      "conformal": {
+        "trade_coverage": 0.6201,
+        "hit_rate": 0.8387,
+        "pnl_per_trade": 0.6775,
+        "sharpe": 1266.5332,
+        "adverse_sel_rate": 0.1701,
+        "high_vol_trade_frac": 0.044,
+        "n_trades": 104788
+      },
+      "ofi_gate": {
+        "trade_coverage": 0.3306,
+        "hit_rate": 0.8407,
+        "pnl_per_trade": 0.6814,
+        "sharpe": 854.9926,
+        "adverse_sel_rate": 0.1672,
+        "high_vol_trade_frac": 0.0447,
+        "n_trades": 55867
+      }
+    },
+    "ofi_vs_raw_delta": {
+      "delta_hit_rate": 0.0366,
+      "delta_adverse_sel": -0.0224,
+      "delta_sharpe": -320.6757,
+      "coverage_reduction": 0.3594
+    }
+  },
+  "cnn_lstm_attention": {
+    "split": "val_calib\u2192val_eval",
+    "alpha": 0.1,
+    "lambda_star": 0.26,
+    "q_hat": 0.4821,
+    "conf_threshold": 0.6,
+    "filters": {
+      "raw": {
+        "trade_coverage": 0.6852,
+        "hit_rate": 0.8695,
+        "pnl_per_trade": 0.7389,
+        "sharpe": 1552.6232,
+        "adverse_sel_rate": 0.1231,
+        "high_vol_trade_frac": 0.0422,
+        "n_trades": 115798
+      },
+      "confidence": {
+        "trade_coverage": 0.6357,
+        "hit_rate": 0.8998,
+        "pnl_per_trade": 0.7995,
+        "sharpe": 1661.3931,
+        "adverse_sel_rate": 0.0963,
+        "high_vol_trade_frac": 0.0428,
+        "n_trades": 107431
+      },
+      "conformal": {
+        "trade_coverage": 0.6073,
+        "hit_rate": 0.9138,
+        "pnl_per_trade": 0.8275,
+        "sharpe": 1694.3119,
+        "adverse_sel_rate": 0.0794,
+        "high_vol_trade_frac": 0.0422,
+        "n_trades": 102629
+      },
+      "ofi_gate": {
+        "trade_coverage": 0.3208,
+        "hit_rate": 0.9176,
+        "pnl_per_trade": 0.8353,
+        "sharpe": 1078.3317,
+        "adverse_sel_rate": 0.0755,
+        "high_vol_trade_frac": 0.0426,
+        "n_trades": 54215
+      }
+    },
+    "ofi_vs_raw_delta": {
+      "delta_hit_rate": 0.0481,
+      "delta_adverse_sel": -0.0476,
+      "delta_sharpe": -474.2915,
+      "coverage_reduction": 0.3644
+    }
+  }
+}

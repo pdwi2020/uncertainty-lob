@@ -1,0 +1,42 @@
+{
+  "no_signal": {
+    "sharpe": -14.152204128852254,
+    "total_pnl": -164.50875854492188,
+    "fill_rate": 0.20833990936351543,
+    "adverse_rate": 0.19559277095395272,
+    "n_fills": 73924,
+    "n_adverse_fills": 14459
+  },
+  "deeplob": {
+    "sharpe": -14.18757760658449,
+    "total_pnl": -164.9210662841797,
+    "fill_rate": 0.20833990936351543,
+    "adverse_rate": 0.19559277095395272,
+    "n_fills": 73924,
+    "n_adverse_fills": 14459
+  },
+  "tcn": {
+    "sharpe": -14.180433838846671,
+    "total_pnl": -164.84991455078125,
+    "fill_rate": 0.20833990936351543,
+    "adverse_rate": 0.19559277095395272,
+    "n_fills": 73924,
+    "n_adverse_fills": 14459
+  },
+  "lob_transformer": {
+    "sharpe": -14.173492556710956,
+    "total_pnl": -164.78536987304688,
+    "fill_rate": 0.20833990936351543,
+    "adverse_rate": 0.19559277095395272,
+    "n_fills": 73924,
+    "n_adverse_fills": 14459
+  },
+  "cnn_lstm_attention": {
+    "sharpe": -14.185347426378128,
+    "total_pnl": -164.89190673828125,
+    "fill_rate": 0.20833990936351543,
+    "adverse_rate": 0.19559277095395272,
+    "n_fills": 73924,
+    "n_adverse_fills": 14459
+  }
+}

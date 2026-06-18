@@ -1,0 +1,74 @@
+{
+  "deeplob": [
+    {
+      "regime": 0,
+      "regime_name": "low-vol",
+      "accuracy": 0.8731659850085904,
+      "f1_macro": 0.8690510821077977,
+      "f1_weighted": 0.8729337577720389,
+      "n_samples": 328855
+    },
+    {
+      "regime": 1,
+      "regime_name": "high-vol",
+      "accuracy": 0.8773869346733668,
+      "f1_macro": 0.8697907273124904,
+      "f1_weighted": 0.8766560008759159,
+      "n_samples": 25870
+    }
+  ],
+  "tcn": [
+    {
+      "regime": 0,
+      "regime_name": "low-vol",
+      "accuracy": 0.8509707925985617,
+      "f1_macro": 0.8481111569007821,
+      "f1_weighted": 0.8508257032848723,
+      "n_samples": 328855
+    },
+    {
+      "regime": 1,
+      "regime_name": "high-vol",
+      "accuracy": 0.862388867413993,
+      "f1_macro": 0.857248199228061,
+      "f1_weighted": 0.8619482487906271,
+      "n_samples": 25870
+    }
+  ],
+  "lob_transformer": [
+    {
+      "regime": 0,
+      "regime_name": "low-vol",
+      "accuracy": 0.8359368110565447,
+      "f1_macro": 0.8331910193642126,
+      "f1_weighted": 0.8358547450114686,
+      "n_samples": 328855
+    },
+    {
+      "regime": 1,
+      "regime_name": "high-vol",
+      "accuracy": 0.8299574797062235,
+      "f1_macro": 0.8244159806847016,
+      "f1_weighted": 0.8297245732479147,
+      "n_samples": 25870
+    }
+  ],
+  "cnn_lstm_attention": [
+    {
+      "regime": 0,
+      "regime_name": "low-vol",
+      "accuracy": 0.8757750376305666,
+      "f1_macro": 0.8725528647726225,
+      "f1_weighted": 0.8756533211131249,
+      "n_samples": 328855
+    },
+    {
+      "regime": 1,
+      "regime_name": "high-vol",
+      "accuracy": 0.8816389640510244,
+      "f1_macro": 0.8755744946846042,
+      "f1_weighted": 0.8811879604353476,
+      "n_samples": 25870
+    }
+  ]
+}

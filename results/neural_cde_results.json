@@ -1,0 +1,24 @@
+{
+  "model": "neural_cde",
+  "horizon": 10,
+  "test_acc": 0.7608429064768483,
+  "test_f1_macro": 0.7524166979395396,
+  "test_f1_weighted": 0.7593086646570637,
+  "test_kappa": 0.6328392724641689,
+  "best_val_metrics": {
+    "epoch": 17,
+    "val_loss": 0.597127377986908,
+    "val_acc": 0.8009994851674981
+  },
+  "config": {
+    "interp": "linear",
+    "T_eff": 25,
+    "stride": 4,
+    "steps": 24,
+    "lr": 0.0001,
+    "batch": 64
+  },
+  "mc_acc": 0.7614,
+  "mc_entropy_mean": 0.39190688729286194,
+  "h1_norm_mean": 3270.035888671875
+}

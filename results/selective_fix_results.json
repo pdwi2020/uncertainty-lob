@@ -1,0 +1,65 @@
+{
+  "model": "LOBTransformerV2",
+  "horizon": 10,
+  "n_val": 337974,
+  "n_test": 354725,
+  "baseline_test_acc_no_abstention": 0.8752667559376982,
+  "leaky_oracle": {
+    "theta": 0.9900000000000007,
+    "test_coverage": 0.566311931778138,
+    "test_selective_acc": 0.9742738382656744,
+    "note": "\u03b8 chosen by maximizing test accuracy \u2014 invalid for publication"
+  },
+  "corrected_max_acc": {
+    "theta": 0.9900000000000007,
+    "val_coverage": 0.5988567167888654,
+    "val_selective_acc": 0.9838041877884168,
+    "test_coverage": 0.566311931778138,
+    "test_selective_acc": 0.9742738382656744,
+    "test_n_selected": 200885,
+    "note": "\u03b8 chosen by maximizing val accuracy (coverage\u226550%) \u2014 valid"
+  },
+  "coverage_operating_points": {
+    "cov50": {
+      "theta": 0.9900000000000007,
+      "val_coverage": 0.5988567167888654,
+      "val_selective_acc": 0.9838041877884168,
+      "test_coverage": 0.566311931778138,
+      "test_selective_acc": 0.9742738382656744,
+      "test_n_selected": 200885
+    },
+    "cov60": {
+      "theta": 0.9800000000000006,
+      "val_coverage": 0.673075443673182,
+      "val_selective_acc": 0.9796115736629711,
+      "test_coverage": 0.6399210656142081,
+      "test_selective_acc": 0.9674751978008423,
+      "test_n_selected": 226996
+    },
+    "cov70": {
+      "theta": 0.9700000000000006,
+      "val_coverage": 0.7133566487362933,
+      "val_selective_acc": 0.9764823970534559,
+      "test_coverage": 0.6809528507999154,
+      "test_selective_acc": 0.9626538494976217,
+      "test_n_selected": 241551
+    },
+    "cov80": {
+      "theta": 0.9200000000000006,
+      "val_coverage": 0.8021149555882997,
+      "val_selective_acc": 0.9662331147129778,
+      "test_coverage": 0.7746366903939672,
+      "test_selective_acc": 0.9480462765163784,
+      "test_n_selected": 274783
+    },
+    "cov90": {
+      "theta": 0.7500000000000004,
+      "val_coverage": 0.9036848988383722,
+      "val_selective_acc": 0.9442672760966794,
+      "test_coverage": 0.8874170131792234,
+      "test_selective_acc": 0.9196668244443104,
+      "test_n_selected": 314789
+    }
+  },
+  "overfit_gap": 0.0
+}

@@ -1,0 +1,206 @@
+{
+  "deeplob_BTCUSDT_k10": {
+    "model": "deeplob",
+    "symbol": "BTCUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      60192,
+      139376,
+      59632
+    ],
+    "label_frac_stat": 0.5377,
+    "acc": 0.3397,
+    "f1_macro": 0.3313,
+    "f1_weighted": 0.3571,
+    "kappa": 0.0415
+  },
+  "tcn_BTCUSDT_k10": {
+    "model": "tcn",
+    "symbol": "BTCUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      60192,
+      139376,
+      59632
+    ],
+    "label_frac_stat": 0.5377,
+    "acc": 0.3776,
+    "f1_macro": 0.3519,
+    "f1_weighted": 0.3966,
+    "kappa": 0.0547
+  },
+  "lob_transformer_BTCUSDT_k10": {
+    "model": "lob_transformer",
+    "symbol": "BTCUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      60192,
+      139376,
+      59632
+    ],
+    "label_frac_stat": 0.5377,
+    "acc": 0.3527,
+    "f1_macro": 0.3368,
+    "f1_weighted": 0.3715,
+    "kappa": 0.0384
+  },
+  "cnn_lstm_attention_BTCUSDT_k10": {
+    "model": "cnn_lstm_attention",
+    "symbol": "BTCUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      60192,
+      139376,
+      59632
+    ],
+    "label_frac_stat": 0.5377,
+    "acc": 0.3471,
+    "f1_macro": 0.3395,
+    "f1_weighted": 0.3643,
+    "kappa": 0.0551
+  },
+  "deeplob_ETHUSDT_k10": {
+    "model": "deeplob",
+    "symbol": "ETHUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      68625,
+      122427,
+      68148
+    ],
+    "label_frac_stat": 0.4723,
+    "acc": 0.3475,
+    "f1_macro": 0.3433,
+    "f1_weighted": 0.3554,
+    "kappa": 0.037
+  },
+  "tcn_ETHUSDT_k10": {
+    "model": "tcn",
+    "symbol": "ETHUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      68625,
+      122427,
+      68148
+    ],
+    "label_frac_stat": 0.4723,
+    "acc": 0.3691,
+    "f1_macro": 0.3442,
+    "f1_weighted": 0.3698,
+    "kappa": 0.0362
+  },
+  "lob_transformer_ETHUSDT_k10": {
+    "model": "lob_transformer",
+    "symbol": "ETHUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      68625,
+      122427,
+      68148
+    ],
+    "label_frac_stat": 0.4723,
+    "acc": 0.3485,
+    "f1_macro": 0.3395,
+    "f1_weighted": 0.3551,
+    "kappa": 0.0285
+  },
+  "cnn_lstm_attention_ETHUSDT_k10": {
+    "model": "cnn_lstm_attention",
+    "symbol": "ETHUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      68625,
+      122427,
+      68148
+    ],
+    "label_frac_stat": 0.4723,
+    "acc": 0.3668,
+    "f1_macro": 0.3598,
+    "f1_weighted": 0.3762,
+    "kappa": 0.0599
+  },
+  "deeplob_SOLUSDT_k10": {
+    "model": "deeplob",
+    "symbol": "SOLUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      57158,
+      146482,
+      55560
+    ],
+    "label_frac_stat": 0.5651,
+    "acc": 0.4192,
+    "f1_macro": 0.376,
+    "f1_weighted": 0.438,
+    "kappa": 0.0857
+  },
+  "tcn_SOLUSDT_k10": {
+    "model": "tcn",
+    "symbol": "SOLUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      57158,
+      146482,
+      55560
+    ],
+    "label_frac_stat": 0.5651,
+    "acc": 0.4345,
+    "f1_macro": 0.3701,
+    "f1_weighted": 0.4452,
+    "kappa": 0.0739
+  },
+  "lob_transformer_SOLUSDT_k10": {
+    "model": "lob_transformer",
+    "symbol": "SOLUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      57158,
+      146482,
+      55560
+    ],
+    "label_frac_stat": 0.5651,
+    "acc": 0.4456,
+    "f1_macro": 0.3794,
+    "f1_weighted": 0.4551,
+    "kappa": 0.0876
+  },
+  "cnn_lstm_attention_SOLUSDT_k10": {
+    "model": "cnn_lstm_attention",
+    "symbol": "SOLUSDT",
+    "horizon": 10,
+    "n_days": 3,
+    "n_samples": 50000,
+    "label_distribution": [
+      57158,
+      146482,
+      55560
+    ],
+    "label_frac_stat": 0.5651,
+    "acc": 0.4158,
+    "f1_macro": 0.3711,
+    "f1_weighted": 0.4342,
+    "kappa": 0.0779
+  }
+}

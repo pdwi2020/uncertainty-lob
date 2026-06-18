@@ -1,0 +1,570 @@
+{
+  "deeplob": {
+    "lambda_star": 0.32,
+    "n_calib": 168987,
+    "n_eval": 168987,
+    "methods": {
+      "LAC": {
+        "base": {
+          "marginal_coverage": 0.7583,
+          "mean_set_size": 0.8165,
+          "singleton_rate": 0.8165,
+          "coverage_gap": 0.0448,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.7563,
+              "n": 161354,
+              "mean_set_size": 0.8143,
+              "singleton": 0.8143
+            },
+            "high_vol": {
+              "coverage": 0.8011,
+              "n": 7633,
+              "mean_set_size": 0.8622,
+              "singleton": 0.8622
+            }
+          },
+          "q_hat": 0.1654
+        },
+        "gated": {
+          "marginal_coverage": 0.7819,
+          "mean_set_size": 0.8503,
+          "singleton_rate": 0.8503,
+          "coverage_gap": 0.0175,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.7811,
+              "n": 161354,
+              "mean_set_size": 0.8497,
+              "singleton": 0.8497
+            },
+            "high_vol": {
+              "coverage": 0.7986,
+              "n": 7633,
+              "mean_set_size": 0.8617,
+              "singleton": 0.8617
+            }
+          },
+          "q_hat": 0.4449
+        },
+        "gap_reduction": 0.6094
+      },
+      "APS": {
+        "base": {
+          "marginal_coverage": 0.9998,
+          "mean_set_size": 2.948,
+          "singleton_rate": 0.0104,
+          "coverage_gap": 0.0003,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9998,
+              "n": 161354,
+              "mean_set_size": 2.9502,
+              "singleton": 0.0099
+            },
+            "high_vol": {
+              "coverage": 0.9995,
+              "n": 7633,
+              "mean_set_size": 2.9016,
+              "singleton": 0.0221
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gated": {
+          "marginal_coverage": 0.9988,
+          "mean_set_size": 2.9179,
+          "singleton_rate": 0.0338,
+          "coverage_gap": 0.0077,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9992,
+              "n": 161354,
+              "mean_set_size": 2.9403,
+              "singleton": 0.0244
+            },
+            "high_vol": {
+              "coverage": 0.9915,
+              "n": 7633,
+              "mean_set_size": 2.4443,
+              "singleton": 0.2331
+            }
+          },
+          "q_hat": 1.3168
+        },
+        "gap_reduction": -24.6667
+      },
+      "RAPS": {
+        "base": {
+          "marginal_coverage": 0.9673,
+          "mean_set_size": 2.0496,
+          "singleton_rate": 0.005,
+          "coverage_gap": 0.0026,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9671,
+              "n": 161354,
+              "mean_set_size": 2.0509,
+              "singleton": 0.0047
+            },
+            "high_vol": {
+              "coverage": 0.9697,
+              "n": 7633,
+              "mean_set_size": 2.0229,
+              "singleton": 0.0114
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gated": {
+          "marginal_coverage": 0.9898,
+          "mean_set_size": 2.5772,
+          "singleton_rate": 0.0183,
+          "coverage_gap": 0.0155,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9905,
+              "n": 161354,
+              "mean_set_size": 2.6012,
+              "singleton": 0.0115
+            },
+            "high_vol": {
+              "coverage": 0.975,
+              "n": 7633,
+              "mean_set_size": 2.0692,
+              "singleton": 0.1639
+            }
+          },
+          "q_hat": 1.3192
+        },
+        "gap_reduction": -4.9615
+      }
+    }
+  },
+  "tcn": {
+    "lambda_star": 0.48,
+    "n_calib": 168987,
+    "n_eval": 168987,
+    "methods": {
+      "LAC": {
+        "base": {
+          "marginal_coverage": 0.765,
+          "mean_set_size": 0.865,
+          "singleton_rate": 0.865,
+          "coverage_gap": 0.0433,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.7631,
+              "n": 161354,
+              "mean_set_size": 0.8632,
+              "singleton": 0.8632
+            },
+            "high_vol": {
+              "coverage": 0.8064,
+              "n": 7633,
+              "mean_set_size": 0.9028,
+              "singleton": 0.9028
+            }
+          },
+          "q_hat": 0.4311
+        },
+        "gated": {
+          "marginal_coverage": 0.8057,
+          "mean_set_size": 0.9443,
+          "singleton_rate": 0.9247,
+          "coverage_gap": 0.0027,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8058,
+              "n": 161354,
+              "mean_set_size": 0.9462,
+              "singleton": 0.9259
+            },
+            "high_vol": {
+              "coverage": 0.8031,
+              "n": 7633,
+              "mean_set_size": 0.9033,
+              "singleton": 0.8991
+            }
+          },
+          "q_hat": 0.8426
+        },
+        "gap_reduction": 0.9376
+      },
+      "APS": {
+        "base": {
+          "marginal_coverage": 0.9999,
+          "mean_set_size": 2.9471,
+          "singleton_rate": 0.0111,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9999,
+              "n": 161354,
+              "mean_set_size": 2.9504,
+              "singleton": 0.0101
+            },
+            "high_vol": {
+              "coverage": 0.9999,
+              "n": 7633,
+              "mean_set_size": 2.8761,
+              "singleton": 0.0321
+            }
+          },
+          "q_hat": 0.9999
+        },
+        "gated": {
+          "marginal_coverage": 0.9991,
+          "mean_set_size": 2.9259,
+          "singleton_rate": 0.0262,
+          "coverage_gap": 0.0065,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9994,
+              "n": 161354,
+              "mean_set_size": 2.9426,
+              "singleton": 0.02
+            },
+            "high_vol": {
+              "coverage": 0.9929,
+              "n": 7633,
+              "mean_set_size": 2.573,
+              "singleton": 0.1564
+            }
+          },
+          "q_hat": 1.4661
+        },
+        "gap_reduction": -6500.0
+      },
+      "RAPS": {
+        "base": {
+          "marginal_coverage": 0.9772,
+          "mean_set_size": 2.1666,
+          "singleton_rate": 0.0032,
+          "coverage_gap": 0.0022,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9773,
+              "n": 161354,
+              "mean_set_size": 2.1698,
+              "singleton": 0.0029
+            },
+            "high_vol": {
+              "coverage": 0.9751,
+              "n": 7633,
+              "mean_set_size": 2.0983,
+              "singleton": 0.0107
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gated": {
+          "marginal_coverage": 0.9947,
+          "mean_set_size": 2.7609,
+          "singleton_rate": 0.0158,
+          "coverage_gap": 0.0126,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9952,
+              "n": 161354,
+              "mean_set_size": 2.7837,
+              "singleton": 0.0111
+            },
+            "high_vol": {
+              "coverage": 0.9826,
+              "n": 7633,
+              "mean_set_size": 2.2781,
+              "singleton": 0.1145
+            }
+          },
+          "q_hat": 1.4733
+        },
+        "gap_reduction": -4.7273
+      }
+    }
+  },
+  "lob_transformer": {
+    "lambda_star": 0.36,
+    "n_calib": 168987,
+    "n_eval": 168987,
+    "methods": {
+      "LAC": {
+        "base": {
+          "marginal_coverage": 0.8315,
+          "mean_set_size": 1.0249,
+          "singleton_rate": 0.9619,
+          "coverage_gap": 0.0081,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8312,
+              "n": 161354,
+              "mean_set_size": 1.0252,
+              "singleton": 0.9616
+            },
+            "high_vol": {
+              "coverage": 0.8393,
+              "n": 7633,
+              "mean_set_size": 1.02,
+              "singleton": 0.9703
+            }
+          },
+          "q_hat": 0.5944
+        },
+        "gated": {
+          "marginal_coverage": 0.8502,
+          "mean_set_size": 1.0806,
+          "singleton_rate": 0.9125,
+          "coverage_gap": 0.0127,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8508,
+              "n": 161354,
+              "mean_set_size": 1.0833,
+              "singleton": 0.9103
+            },
+            "high_vol": {
+              "coverage": 0.8381,
+              "n": 7633,
+              "mean_set_size": 1.0228,
+              "singleton": 0.9595
+            }
+          },
+          "q_hat": 0.9043
+        },
+        "gap_reduction": -0.5679
+      },
+      "APS": {
+        "base": {
+          "marginal_coverage": 0.9998,
+          "mean_set_size": 2.922,
+          "singleton_rate": 0.0098,
+          "coverage_gap": 0.0008,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9999,
+              "n": 161354,
+              "mean_set_size": 2.9247,
+              "singleton": 0.0091
+            },
+            "high_vol": {
+              "coverage": 0.9991,
+              "n": 7633,
+              "mean_set_size": 2.8637,
+              "singleton": 0.0259
+            }
+          },
+          "q_hat": 0.9992
+        },
+        "gated": {
+          "marginal_coverage": 0.9992,
+          "mean_set_size": 2.931,
+          "singleton_rate": 0.0252,
+          "coverage_gap": 0.0071,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9995,
+              "n": 161354,
+              "mean_set_size": 2.9469,
+              "singleton": 0.0192
+            },
+            "high_vol": {
+              "coverage": 0.9924,
+              "n": 7633,
+              "mean_set_size": 2.5952,
+              "singleton": 0.1505
+            }
+          },
+          "q_hat": 1.3481
+        },
+        "gap_reduction": -7.875
+      },
+      "RAPS": {
+        "base": {
+          "marginal_coverage": 0.9641,
+          "mean_set_size": 2.1169,
+          "singleton_rate": 0.0005,
+          "coverage_gap": 0.0004,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9641,
+              "n": 161354,
+              "mean_set_size": 2.1181,
+              "singleton": 0.0005
+            },
+            "high_vol": {
+              "coverage": 0.9637,
+              "n": 7633,
+              "mean_set_size": 2.0914,
+              "singleton": 0.001
+            }
+          },
+          "q_hat": 0.9996
+        },
+        "gated": {
+          "marginal_coverage": 0.9918,
+          "mean_set_size": 2.7114,
+          "singleton_rate": 0.0062,
+          "coverage_gap": 0.0172,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9926,
+              "n": 161354,
+              "mean_set_size": 2.7308,
+              "singleton": 0.004
+            },
+            "high_vol": {
+              "coverage": 0.9754,
+              "n": 7633,
+              "mean_set_size": 2.2996,
+              "singleton": 0.0532
+            }
+          },
+          "q_hat": 1.3569
+        },
+        "gap_reduction": -42.0
+      }
+    }
+  },
+  "cnn_lstm_attention": {
+    "lambda_star": 0.26,
+    "n_calib": 168987,
+    "n_eval": 168987,
+    "methods": {
+      "LAC": {
+        "base": {
+          "marginal_coverage": 0.8096,
+          "mean_set_size": 0.8734,
+          "singleton_rate": 0.8734,
+          "coverage_gap": 0.0209,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8087,
+              "n": 161354,
+              "mean_set_size": 0.8722,
+              "singleton": 0.8722
+            },
+            "high_vol": {
+              "coverage": 0.8296,
+              "n": 7633,
+              "mean_set_size": 0.8968,
+              "singleton": 0.8968
+            }
+          },
+          "q_hat": 0.2579
+        },
+        "gated": {
+          "marginal_coverage": 0.8218,
+          "mean_set_size": 0.8923,
+          "singleton_rate": 0.8923,
+          "coverage_gap": 0.0079,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8215,
+              "n": 161354,
+              "mean_set_size": 0.8922,
+              "singleton": 0.8922
+            },
+            "high_vol": {
+              "coverage": 0.8294,
+              "n": 7633,
+              "mean_set_size": 0.8956,
+              "singleton": 0.8956
+            }
+          },
+          "q_hat": 0.4821
+        },
+        "gap_reduction": 0.622
+      },
+      "APS": {
+        "base": {
+          "marginal_coverage": 0.9996,
+          "mean_set_size": 2.9243,
+          "singleton_rate": 0.0143,
+          "coverage_gap": 0.0009,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9997,
+              "n": 161354,
+              "mean_set_size": 2.9258,
+              "singleton": 0.0135
+            },
+            "high_vol": {
+              "coverage": 0.9988,
+              "n": 7633,
+              "mean_set_size": 2.8918,
+              "singleton": 0.0301
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gated": {
+          "marginal_coverage": 0.9988,
+          "mean_set_size": 2.9245,
+          "singleton_rate": 0.0309,
+          "coverage_gap": 0.0095,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9993,
+              "n": 161354,
+              "mean_set_size": 2.9452,
+              "singleton": 0.0221
+            },
+            "high_vol": {
+              "coverage": 0.9898,
+              "n": 7633,
+              "mean_set_size": 2.4883,
+              "singleton": 0.2175
+            }
+          },
+          "q_hat": 1.2566
+        },
+        "gap_reduction": -9.5556
+      },
+      "RAPS": {
+        "base": {
+          "marginal_coverage": 0.9711,
+          "mean_set_size": 2.06,
+          "singleton_rate": 0.0069,
+          "coverage_gap": 0.0018,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9711,
+              "n": 161354,
+              "mean_set_size": 2.0611,
+              "singleton": 0.0065
+            },
+            "high_vol": {
+              "coverage": 0.9693,
+              "n": 7633,
+              "mean_set_size": 2.0371,
+              "singleton": 0.0157
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gated": {
+          "marginal_coverage": 0.988,
+          "mean_set_size": 2.4502,
+          "singleton_rate": 0.0152,
+          "coverage_gap": 0.0189,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9889,
+              "n": 161354,
+              "mean_set_size": 2.4703,
+              "singleton": 0.009
+            },
+            "high_vol": {
+              "coverage": 0.97,
+              "n": 7633,
+              "mean_set_size": 2.0246,
+              "singleton": 0.1465
+            }
+          },
+          "q_hat": 1.2591
+        },
+        "gap_reduction": -9.5
+      }
+    }
+  }
+}

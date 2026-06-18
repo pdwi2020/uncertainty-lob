@@ -1,0 +1,24 @@
+{
+  "lob_sde_gate": {
+    "q": 0.5624,
+    "coverage": 0.6862,
+    "mean_set_size": 0.9858,
+    "singleton_rate": 0.961,
+    "auroc_entropy": 0.7412,
+    "acc": 0.7967
+  },
+  "lob_sde_nogate": {
+    "seeds_loaded": [
+      0
+    ],
+    "n": 354725,
+    "n_calib": 177362,
+    "acc": 0.7388,
+    "q": 0.7679,
+    "coverage": 0.7317,
+    "mean_set_size": 1.2488,
+    "singleton_rate": 0.7675,
+    "auroc_entropy": 0.6885,
+    "note": "seed 0 only; seed 1 test_logits lost with pod; seed 2 CUDA crash"
+  }
+}

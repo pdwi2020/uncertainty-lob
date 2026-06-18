@@ -1,0 +1,48 @@
+{
+  "evlob_gate": {
+    "n": 354725,
+    "n_calib": 177362,
+    "acc": 0.8296173091831701,
+    "ece_softmax": 0.08684958407260354,
+    "LAC": {
+      "q": 0.5489,
+      "coverage": 0.6751,
+      "mean_set_size": 0.8798,
+      "singleton_rate": 0.8798
+    },
+    "vacuity_augmented": {
+      "lambda": 0.0,
+      "q": 0.5489,
+      "coverage": 0.6751,
+      "mean_set_size": 0.8798,
+      "singleton_rate": 0.8798
+    },
+    "auroc": {
+      "entropy": 0.7609363067062127,
+      "vacuity": 0.7047080542906721
+    }
+  },
+  "evlob_nogate": {
+    "n": 354725,
+    "n_calib": 177362,
+    "acc": 0.8310973289167665,
+    "ece_softmax": 0.08582832981159089,
+    "LAC": {
+      "q": 0.5478,
+      "coverage": 0.6778,
+      "mean_set_size": 0.8802,
+      "singleton_rate": 0.8802
+    },
+    "vacuity_augmented": {
+      "lambda": 0.0,
+      "q": 0.5478,
+      "coverage": 0.6778,
+      "mean_set_size": 0.8802,
+      "singleton_rate": 0.8802
+    },
+    "auroc": {
+      "entropy": 0.7632422140155964,
+      "vacuity": 0.7164678946398035
+    }
+  }
+}

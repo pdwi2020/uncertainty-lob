@@ -1,0 +1,30 @@
+{
+  "evlob_gate": {
+    "acc_mean": 79.06,
+    "acc_ci": 0.18,
+    "ece_mean": 0.027,
+    "vac_mean": 0.3433,
+    "n_seeds": 3
+  },
+  "evlob_nogate": {
+    "acc_mean": 79.45,
+    "acc_ci": 0.31,
+    "ece_mean": 0.0285,
+    "vac_mean": 0.344,
+    "n_seeds": 3
+  },
+  "rac_moe_gate": {
+    "acc_mean": 80.21,
+    "acc_ci": 0.38,
+    "ece_mean": 0.109,
+    "vac_mean": NaN,
+    "n_seeds": 3
+  },
+  "lob_sde_gate": {
+    "acc_mean": 75.16,
+    "acc_ci": 0.53,
+    "ece_mean": 0.1087,
+    "vac_mean": NaN,
+    "n_seeds": 3
+  }
+}

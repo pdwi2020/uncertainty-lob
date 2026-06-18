@@ -1,0 +1,66 @@
+{
+  "deeplob_lobster_AAPL_k10": {
+    "model": "deeplob",
+    "dataset": "lobster_AAPL",
+    "ticker": "AAPL",
+    "date": "2012-06-21",
+    "n_samples": 400291,
+    "label_distribution": [
+      23495,
+      353753,
+      23143
+    ],
+    "acc": 0.40527516231941263,
+    "f1_macro": 0.24219673575969455,
+    "f1_weighted": 0.5237124962416531,
+    "kappa": 7.704356641069499e-05
+  },
+  "tcn_lobster_AAPL_k10": {
+    "model": "tcn",
+    "dataset": "lobster_AAPL",
+    "ticker": "AAPL",
+    "date": "2012-06-21",
+    "n_samples": 400291,
+    "label_distribution": [
+      23495,
+      353753,
+      23143
+    ],
+    "acc": 0.49080294086052395,
+    "f1_macro": 0.2657981597462174,
+    "f1_weighted": 0.6000337210332337,
+    "kappa": 0.0003538086980426902
+  },
+  "lob_transformer_lobster_AAPL_k10": {
+    "model": "lob_transformer",
+    "dataset": "lobster_AAPL",
+    "ticker": "AAPL",
+    "date": "2012-06-21",
+    "n_samples": 400291,
+    "label_distribution": [
+      23495,
+      353753,
+      23143
+    ],
+    "acc": 0.3465528827777792,
+    "f1_macro": 0.21819427816842477,
+    "f1_weighted": 0.466321899442605,
+    "kappa": -0.0037327005196017282
+  },
+  "cnn_lstm_attention_lobster_AAPL_k10": {
+    "model": "cnn_lstm_attention",
+    "dataset": "lobster_AAPL",
+    "ticker": "AAPL",
+    "date": "2012-06-21",
+    "n_samples": 400291,
+    "label_distribution": [
+      23495,
+      353753,
+      23143
+    ],
+    "acc": 0.39105300893599904,
+    "f1_macro": 0.24282334070049968,
+    "f1_weighted": 0.5080976409149092,
+    "kappa": 0.007050680340120463
+  }
+}

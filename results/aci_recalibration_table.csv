@@ -1,0 +1,4 @@
+Method,Coverage,Avg Set Size,Singleton %
+LAC (standard),0.868,0.982,0.982
+ACI (η=0.05),0.894,1.114,0.828
+AgACI (K=6),0.910,1.149,0.828

@@ -1,0 +1,29 @@
+{
+  "device": "mps",
+  "train_n": 72000,
+  "test_n": 18000,
+  "epochs": 12,
+  "test_acc": 0.5535,
+  "test_kappa": 0.0348,
+  "test_macro_f1": 0.2864,
+  "chance_acc": 0.3333,
+  "per_symbol": {
+    "BTCUSDT": {
+      "n": 6000,
+      "acc": 0.5833,
+      "kappa": 0.0165
+    },
+    "ETHUSDT": {
+      "n": 6000,
+      "acc": 0.4762,
+      "kappa": 0.0491
+    },
+    "SOLUSDT": {
+      "n": 6000,
+      "acc": 0.601,
+      "kappa": 0.0057
+    }
+  },
+  "decision": "NO-GO",
+  "criterion": "acc>0.42 and kappa>0.08"
+}
