@@ -24,9 +24,10 @@ kaggle.json
 .kaggle/
 
 # ---- Large data, model weights, intermediate tensors (NOT redistributed) ----
-data/
-datasets/
-checkpoints/
+# (root-anchored so they don't swallow nested code packages like src/data/)
+/data/
+/datasets/
+/checkpoints/
 *.pt
 *.pth
 *.ckpt
@@ -38,11 +39,11 @@ checkpoints/
 *.log
 
 # ---- The manuscript: this is a CODE repo, not the paper ----
-paper/
-literature/
-references/
-report_figures/
-figures/
+/paper/
+/literature/
+/references/
+/report_figures/
+/figures/
 *.tex
 *.bib
 *.pdf
