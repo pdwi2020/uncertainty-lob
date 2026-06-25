@@ -16,14 +16,21 @@ We study uncertainty quantification (UQ) for deep sequence models applied to
 high-frequency limit order book (LOB) mid-price movement forecasting (3-class:
 up / stationary / down). The contributions are methodological:
 
-- **Learned conformal gate** — a compact network that maps order-flow
-  microstructure to a per-instance nonconformity adjustment, trained end-to-end
-  with a differentiable coverage–efficiency objective on *frozen* classifier
-  logits (no base-model retraining). It reduces the per-regime (Mondrian)
-  coverage gap by up to ~90% relative to standard split conformal prediction.
-- **EvLOB** — a single-pass, microstructure-gated *evidential* architecture that
-  decomposes epistemic (Dirichlet vacuity) and aleatoric uncertainty in one
-  forward pass, with no Monte-Carlo sampling or ensembles.
+- **Leakage-free FI-2010 benchmark** — a widely used concatenated training
+  protocol duplicates the cumulative anchored-fold training windows ~4.66× and
+  inflates accuracy. We re-benchmark six architectures under a strict anchored
+  walk-forward (best accuracy ~68%, vs the ~85–88% commonly reported).
+- **EvLOB** (primary) — a single-pass, microstructure-gated *evidential*
+  architecture that decomposes epistemic (Dirichlet vacuity) and aleatoric
+  uncertainty in one forward pass, with no Monte-Carlo sampling or ensembles. A
+  *corrected* order-flow gate improves both accuracy and calibration over ungated
+  and naively-gated baselines.
+- **Learned conformal gate (cautionary result)** — a compact network mapping
+  order-flow microstructure to a per-instance nonconformity adjustment on frozen
+  logits. Under the leaky concatenated protocol it appeared to cut the per-regime
+  (Mondrian) coverage gap by ~90%; under the leakage-free protocol the base
+  classifiers' gaps are already small (0.004–0.014 vs 0.045), so the benefit
+  largely vanishes — the gap was an artifact of leakage.
 - **Multi-method UQ benchmark** — temperature scaling, MC dropout, and split
   conformal across the benchmarked LOB architectures, including adaptive
   conformal inference (ACI / AgACI) baselines that restore coverage under

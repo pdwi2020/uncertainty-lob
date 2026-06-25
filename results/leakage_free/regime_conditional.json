@@ -1,0 +1,66 @@
+{
+  "deeplob": {
+    "low_vol": {
+      "acc_mean": 0.6827,
+      "acc_std": 0.0034,
+      "f1_macro_mean": 0.6822,
+      "f1_macro_std": 0.0038,
+      "n_samples": 15919
+    },
+    "high_vol": {
+      "acc_mean": 0.7302,
+      "acc_std": 0.0039,
+      "f1_macro_mean": 0.7204,
+      "f1_macro_std": 0.0033,
+      "n_samples": 15919
+    }
+  },
+  "tcn": {
+    "low_vol": {
+      "acc_mean": 0.673,
+      "acc_std": 0.0701,
+      "f1_macro_mean": 0.6706,
+      "f1_macro_std": 0.0734,
+      "n_samples": 15919
+    },
+    "high_vol": {
+      "acc_mean": 0.7196,
+      "acc_std": 0.065,
+      "f1_macro_mean": 0.7149,
+      "f1_macro_std": 0.0614,
+      "n_samples": 15919
+    }
+  },
+  "lob_transformer": {
+    "low_vol": {
+      "acc_mean": 0.6577,
+      "acc_std": 0.0546,
+      "f1_macro_mean": 0.655,
+      "f1_macro_std": 0.058,
+      "n_samples": 15919
+    },
+    "high_vol": {
+      "acc_mean": 0.6922,
+      "acc_std": 0.0713,
+      "f1_macro_mean": 0.688,
+      "f1_macro_std": 0.0686,
+      "n_samples": 15919
+    }
+  },
+  "cnn_lstm_attention": {
+    "low_vol": {
+      "acc_mean": 0.6736,
+      "acc_std": 0.0056,
+      "f1_macro_mean": 0.6733,
+      "f1_macro_std": 0.0051,
+      "n_samples": 15919
+    },
+    "high_vol": {
+      "acc_mean": 0.7215,
+      "acc_std": 0.0045,
+      "f1_macro_mean": 0.7187,
+      "f1_macro_std": 0.0045,
+      "n_samples": 15919
+    }
+  }
+}

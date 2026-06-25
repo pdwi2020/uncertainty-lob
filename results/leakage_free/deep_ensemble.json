@@ -1,0 +1,37 @@
+{
+  "ensemble_4model_3seeds": {
+    "models": [
+      "deeplob",
+      "tcn",
+      "lob_transformer",
+      "cnn_lstm_attention"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "fold": 9,
+    "n_test": 31838,
+    "accuracy": 0.7528,
+    "ece": 0.0452,
+    "kappa": 0.6273
+  },
+  "ensemble_3model_3seeds": {
+    "models": [
+      "tcn",
+      "lob_transformer",
+      "cnn_lstm_attention"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "fold": 9,
+    "n_test": 31838,
+    "accuracy": 0.7507,
+    "ece": 0.0504,
+    "kappa": 0.6242
+  }
+}

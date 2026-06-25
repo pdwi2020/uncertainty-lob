@@ -1,0 +1,570 @@
+{
+  "deeplob": {
+    "lambda_cf": 0.02,
+    "n_calib": 18070,
+    "n_eval": 18071,
+    "methods": {
+      "LAC": {
+        "base": {
+          "marginal_coverage": 0.8765,
+          "mean_set_size": 1.942,
+          "singleton_rate": 0.3569,
+          "coverage_gap": 0.0071,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8808,
+              "n": 7180,
+              "mean_set_size": 1.9617,
+              "singleton": 0.3467
+            },
+            "high_vol": {
+              "coverage": 0.8737,
+              "n": 10891,
+              "mean_set_size": 1.9289,
+              "singleton": 0.3637
+            }
+          },
+          "q_hat": 0.8674
+        },
+        "gated": {
+          "marginal_coverage": 0.8765,
+          "mean_set_size": 1.9429,
+          "singleton_rate": 0.3572,
+          "coverage_gap": 0.0073,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8809,
+              "n": 7180,
+              "mean_set_size": 1.9632,
+              "singleton": 0.3469
+            },
+            "high_vol": {
+              "coverage": 0.8736,
+              "n": 10891,
+              "mean_set_size": 1.9296,
+              "singleton": 0.364
+            }
+          },
+          "q_hat": 0.8807
+        },
+        "gap_reduction": -0.0282
+      },
+      "APS": {
+        "base": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gated": {
+          "marginal_coverage": 0.9998,
+          "mean_set_size": 2.995,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0001,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9999,
+              "n": 7180,
+              "mean_set_size": 2.9989,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 0.9998,
+              "n": 10891,
+              "mean_set_size": 2.9924,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.0116
+        },
+        "gap_reduction": -100.0
+      },
+      "RAPS": {
+        "base": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.2
+        },
+        "gated": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.2116
+        },
+        "gap_reduction": 0.0
+      }
+    }
+  },
+  "tcn": {
+    "lambda_cf": 0.3,
+    "n_calib": 18070,
+    "n_eval": 18071,
+    "methods": {
+      "LAC": {
+        "base": {
+          "marginal_coverage": 0.9124,
+          "mean_set_size": 2.4339,
+          "singleton_rate": 0.0965,
+          "coverage_gap": 0.0141,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9039,
+              "n": 7180,
+              "mean_set_size": 2.4442,
+              "singleton": 0.0905
+            },
+            "high_vol": {
+              "coverage": 0.918,
+              "n": 10891,
+              "mean_set_size": 2.4271,
+              "singleton": 0.1004
+            }
+          },
+          "q_hat": 0.8441
+        },
+        "gated": {
+          "marginal_coverage": 0.9178,
+          "mean_set_size": 2.4821,
+          "singleton_rate": 0.0947,
+          "coverage_gap": 0.011,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9111,
+              "n": 7180,
+              "mean_set_size": 2.4999,
+              "singleton": 0.0836
+            },
+            "high_vol": {
+              "coverage": 0.9221,
+              "n": 10891,
+              "mean_set_size": 2.4704,
+              "singleton": 0.1021
+            }
+          },
+          "q_hat": 1.0492
+        },
+        "gap_reduction": 0.2199
+      },
+      "APS": {
+        "base": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gated": {
+          "marginal_coverage": 0.9993,
+          "mean_set_size": 2.9858,
+          "singleton_rate": 0.0007,
+          "coverage_gap": 0.0005,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.999,
+              "n": 7180,
+              "mean_set_size": 2.9921,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 0.9995,
+              "n": 10891,
+              "mean_set_size": 2.9816,
+              "singleton": 0.0011
+            }
+          },
+          "q_hat": 1.1989
+        },
+        "gap_reduction": -500.0
+      },
+      "RAPS": {
+        "base": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.2
+        },
+        "gated": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.3907
+        },
+        "gap_reduction": 0.0
+      }
+    }
+  },
+  "lob_transformer": {
+    "lambda_cf": 0.0,
+    "n_calib": 18070,
+    "n_eval": 18071,
+    "methods": {
+      "LAC": {
+        "base": {
+          "marginal_coverage": 0.8811,
+          "mean_set_size": 2.3472,
+          "singleton_rate": 0.0732,
+          "coverage_gap": 0.0128,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8734,
+              "n": 7180,
+              "mean_set_size": 2.4029,
+              "singleton": 0.062
+            },
+            "high_vol": {
+              "coverage": 0.8862,
+              "n": 10891,
+              "mean_set_size": 2.3105,
+              "singleton": 0.0806
+            }
+          },
+          "q_hat": 0.8208
+        },
+        "gated": {
+          "marginal_coverage": 0.8811,
+          "mean_set_size": 2.3472,
+          "singleton_rate": 0.0732,
+          "coverage_gap": 0.0128,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8734,
+              "n": 7180,
+              "mean_set_size": 2.4029,
+              "singleton": 0.062
+            },
+            "high_vol": {
+              "coverage": 0.8862,
+              "n": 10891,
+              "mean_set_size": 2.3105,
+              "singleton": 0.0806
+            }
+          },
+          "q_hat": 0.8208
+        },
+        "gap_reduction": 0.0
+      },
+      "APS": {
+        "base": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gated": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gap_reduction": 0.0
+      },
+      "RAPS": {
+        "base": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.2
+        },
+        "gated": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.2
+        },
+        "gap_reduction": 0.0
+      }
+    }
+  },
+  "cnn_lstm_attention": {
+    "lambda_cf": 0.18,
+    "n_calib": 18070,
+    "n_eval": 18071,
+    "methods": {
+      "LAC": {
+        "base": {
+          "marginal_coverage": 0.8908,
+          "mean_set_size": 1.9723,
+          "singleton_rate": 0.3565,
+          "coverage_gap": 0.004,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8884,
+              "n": 7180,
+              "mean_set_size": 1.9496,
+              "singleton": 0.385
+            },
+            "high_vol": {
+              "coverage": 0.8924,
+              "n": 10891,
+              "mean_set_size": 1.9872,
+              "singleton": 0.3378
+            }
+          },
+          "q_hat": 0.8659
+        },
+        "gated": {
+          "marginal_coverage": 0.8946,
+          "mean_set_size": 2.0001,
+          "singleton_rate": 0.3492,
+          "coverage_gap": 0.004,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8922,
+              "n": 7180,
+              "mean_set_size": 1.9762,
+              "singleton": 0.3781
+            },
+            "high_vol": {
+              "coverage": 0.8962,
+              "n": 10891,
+              "mean_set_size": 2.0158,
+              "singleton": 0.3302
+            }
+          },
+          "q_hat": 0.9873
+        },
+        "gap_reduction": 0.0
+      },
+      "APS": {
+        "base": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.0
+        },
+        "gated": {
+          "marginal_coverage": 0.9985,
+          "mean_set_size": 2.958,
+          "singleton_rate": 0.008,
+          "coverage_gap": 0.0002,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9983,
+              "n": 7180,
+              "mean_set_size": 2.9735,
+              "singleton": 0.0026
+            },
+            "high_vol": {
+              "coverage": 0.9985,
+              "n": 10891,
+              "mean_set_size": 2.9478,
+              "singleton": 0.0116
+            }
+          },
+          "q_hat": 1.1196
+        },
+        "gap_reduction": -200.0
+      },
+      "RAPS": {
+        "base": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.2
+        },
+        "gated": {
+          "marginal_coverage": 1.0,
+          "mean_set_size": 3.0,
+          "singleton_rate": 0.0,
+          "coverage_gap": 0.0,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 1.0,
+              "n": 7180,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            },
+            "high_vol": {
+              "coverage": 1.0,
+              "n": 10891,
+              "mean_set_size": 3.0,
+              "singleton": 0.0
+            }
+          },
+          "q_hat": 1.3022
+        },
+        "gap_reduction": 0.0
+      }
+    }
+  }
+}
