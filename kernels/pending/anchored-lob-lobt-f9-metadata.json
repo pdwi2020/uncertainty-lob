@@ -1,0 +1,13 @@
+{
+  "id": "paritoshdwivedi/anchored-lob-lobt-f9",
+  "title": "anchored-lob-lobt-f9",
+  "code_file": "anchored-lob-lobt-f9.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": ["wzy841127938/fi2010"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

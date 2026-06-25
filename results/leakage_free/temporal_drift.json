@@ -1,0 +1,66 @@
+{
+  "task": "temporal_drift_coverage_leakage_free",
+  "alpha": 0.1,
+  "fold": 9,
+  "horizon_k": 10,
+  "methodology": "Split test stream in half. Fit LAC q\u0302 (alpha=0.10) on H1. Evaluate coverage on H2. Drift shortfall = (1-alpha) - H2_cov.",
+  "results": {
+    "evlob_corrected_pooled": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "pooling": "concatenate",
+      "N_total": 95514,
+      "H1_n": 47757,
+      "H2_n": 47757,
+      "q_hat": 0.819696307182312,
+      "H1_coverage": 0.9000355968758507,
+      "H1_mean_set_size": 1.7547375253889481,
+      "H1_singleton_rate": 0.617605796008962,
+      "H2_coverage": 0.9128295328433528,
+      "H2_mean_set_size": 1.9096258140167934,
+      "H2_singleton_rate": 0.5433130221747597,
+      "drift_shortfall": -0.012829532843352753,
+      "note": "shortfall = (1-alpha) - H2_coverage; positive = under-coverage in second half",
+      "per_seed": {
+        "seed_0": {
+          "q_hat": 0.8274036049842834,
+          "H2_coverage": 0.9047678874301149,
+          "drift_shortfall": -0.004767887430114914
+        },
+        "seed_1": {
+          "q_hat": 0.8058754801750183,
+          "H2_coverage": 0.915258496136692,
+          "drift_shortfall": -0.015258496136691946
+        },
+        "seed_2": {
+          "q_hat": 0.8053327202796936,
+          "H2_coverage": 0.8963502732583705,
+          "drift_shortfall": 0.0036497267416295553
+        }
+      }
+    },
+    "lob_sde_none_dt0p05_s0": {
+      "N_total": 31838,
+      "H1_n": 15919,
+      "H2_n": 15919,
+      "q_hat": 0.8835837841033936,
+      "H2_coverage": 0.9064639738677053,
+      "H2_mean_set_size": 2.060116841510145,
+      "H2_singleton_rate": 0.3130221747597211,
+      "drift_shortfall": -0.006463973867705253
+    },
+    "lob_sde_corrected_dt0p05_s0": {
+      "N_total": 31838,
+      "H1_n": 15919,
+      "H2_n": 15919,
+      "q_hat": 0.7968816161155701,
+      "H2_coverage": 0.8472265845844589,
+      "H2_mean_set_size": 1.8717884289214146,
+      "H2_singleton_rate": 0.3215026069476726,
+      "drift_shortfall": 0.05277341541554115
+    }
+  }
+}

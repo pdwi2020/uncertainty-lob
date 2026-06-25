@@ -1,0 +1,212 @@
+{
+  "task": "adverse_selection_ladder_leakage_free",
+  "alpha": 0.1,
+  "fold": 9,
+  "horizon_k": 10,
+  "conf_threshold": 0.6,
+  "methodology": "Calibration: val logits \u2192 LAC q\u0302 (alpha=0.10). Evaluation: test logits. Filters: (1) raw=argmax\u2260stationary, (2) confidence=raw+max_softmax\u22650.60, (3) conformal=LAC singleton |C|=1 \u2260 stationary. OFI gate DEFERRED: MACC psi features not available for fold-9 test. adverse_sel_rate = P(wrong | trade). Excludes transaction costs. 3 seeds averaged.",
+  "models": {
+    "deeplob": {
+      "per_seed": {
+        "seed_0": {
+          "q_hat": 0.8779006004333496,
+          "raw": {
+            "trade_coverage": 0.7355,
+            "hit_rate": 0.7173,
+            "pnl_per_trade": 0.4347,
+            "adverse_sel_rate": 0.2827,
+            "n_trades": 23416
+          },
+          "confidence": {
+            "trade_coverage": 0.5742,
+            "hit_rate": 0.7882,
+            "pnl_per_trade": 0.5764,
+            "adverse_sel_rate": 0.2118,
+            "n_trades": 18281
+          },
+          "conformal": {
+            "trade_coverage": 0.3759,
+            "hit_rate": 0.8762,
+            "pnl_per_trade": 0.7525,
+            "adverse_sel_rate": 0.1238,
+            "n_trades": 11967
+          }
+        },
+        "seed_1": {
+          "q_hat": 0.8816351890563965,
+          "raw": {
+            "trade_coverage": 0.6788,
+            "hit_rate": 0.7358,
+            "pnl_per_trade": 0.4716,
+            "adverse_sel_rate": 0.2642,
+            "n_trades": 21613
+          },
+          "confidence": {
+            "trade_coverage": 0.5492,
+            "hit_rate": 0.795,
+            "pnl_per_trade": 0.5899,
+            "adverse_sel_rate": 0.205,
+            "n_trades": 17484
+          },
+          "conformal": {
+            "trade_coverage": 0.3712,
+            "hit_rate": 0.874,
+            "pnl_per_trade": 0.748,
+            "adverse_sel_rate": 0.126,
+            "n_trades": 11817
+          }
+        },
+        "seed_2": {
+          "q_hat": 0.8772999048233032,
+          "raw": {
+            "trade_coverage": 0.7139,
+            "hit_rate": 0.7198,
+            "pnl_per_trade": 0.4397,
+            "adverse_sel_rate": 0.2802,
+            "n_trades": 22730
+          },
+          "confidence": {
+            "trade_coverage": 0.5681,
+            "hit_rate": 0.7836,
+            "pnl_per_trade": 0.5673,
+            "adverse_sel_rate": 0.2164,
+            "n_trades": 18086
+          },
+          "conformal": {
+            "trade_coverage": 0.3876,
+            "hit_rate": 0.864,
+            "pnl_per_trade": 0.728,
+            "adverse_sel_rate": 0.136,
+            "n_trades": 12340
+          }
+        }
+      },
+      "mean_over_seeds": {
+        "q_hat": 0.8789452314376831,
+        "raw": {
+          "trade_coverage": 0.7094,
+          "hit_rate": 0.7243,
+          "pnl_per_trade": 0.4487,
+          "adverse_sel_rate": 0.2757,
+          "n_trades_mean": 22586.0
+        },
+        "confidence": {
+          "trade_coverage": 0.5638,
+          "hit_rate": 0.7889,
+          "pnl_per_trade": 0.5779,
+          "adverse_sel_rate": 0.2111,
+          "n_trades_mean": 17950.0
+        },
+        "conformal": {
+          "trade_coverage": 0.3782,
+          "hit_rate": 0.8714,
+          "pnl_per_trade": 0.7428,
+          "adverse_sel_rate": 0.1286,
+          "n_trades_mean": 12041.0
+        }
+      },
+      "ofi_gate": "DEFERRED \u2014 fold-9 MACC features (psi/OFI) not available for test split"
+    },
+    "cnn_lstm_attention": {
+      "per_seed": {
+        "seed_0": {
+          "q_hat": 0.871380090713501,
+          "raw": {
+            "trade_coverage": 0.7125,
+            "hit_rate": 0.7015,
+            "pnl_per_trade": 0.403,
+            "adverse_sel_rate": 0.2985,
+            "n_trades": 22685
+          },
+          "confidence": {
+            "trade_coverage": 0.5383,
+            "hit_rate": 0.7759,
+            "pnl_per_trade": 0.5519,
+            "adverse_sel_rate": 0.2241,
+            "n_trades": 17139
+          },
+          "conformal": {
+            "trade_coverage": 0.3689,
+            "hit_rate": 0.8515,
+            "pnl_per_trade": 0.703,
+            "adverse_sel_rate": 0.1485,
+            "n_trades": 11746
+          }
+        },
+        "seed_1": {
+          "q_hat": 0.8625913262367249,
+          "raw": {
+            "trade_coverage": 0.7373,
+            "hit_rate": 0.6904,
+            "pnl_per_trade": 0.3808,
+            "adverse_sel_rate": 0.3096,
+            "n_trades": 23474
+          },
+          "confidence": {
+            "trade_coverage": 0.5543,
+            "hit_rate": 0.7677,
+            "pnl_per_trade": 0.5354,
+            "adverse_sel_rate": 0.2323,
+            "n_trades": 17649
+          },
+          "conformal": {
+            "trade_coverage": 0.3877,
+            "hit_rate": 0.8398,
+            "pnl_per_trade": 0.6797,
+            "adverse_sel_rate": 0.1602,
+            "n_trades": 12343
+          }
+        },
+        "seed_2": {
+          "q_hat": 0.8760666847229004,
+          "raw": {
+            "trade_coverage": 0.6974,
+            "hit_rate": 0.7081,
+            "pnl_per_trade": 0.4162,
+            "adverse_sel_rate": 0.2919,
+            "n_trades": 22205
+          },
+          "confidence": {
+            "trade_coverage": 0.5367,
+            "hit_rate": 0.7749,
+            "pnl_per_trade": 0.5499,
+            "adverse_sel_rate": 0.2251,
+            "n_trades": 17089
+          },
+          "conformal": {
+            "trade_coverage": 0.3688,
+            "hit_rate": 0.8494,
+            "pnl_per_trade": 0.6989,
+            "adverse_sel_rate": 0.1506,
+            "n_trades": 11742
+          }
+        }
+      },
+      "mean_over_seeds": {
+        "q_hat": 0.8700127005577087,
+        "raw": {
+          "trade_coverage": 0.7157,
+          "hit_rate": 0.7,
+          "pnl_per_trade": 0.4,
+          "adverse_sel_rate": 0.3,
+          "n_trades_mean": 22788.0
+        },
+        "confidence": {
+          "trade_coverage": 0.5431,
+          "hit_rate": 0.7728,
+          "pnl_per_trade": 0.5457,
+          "adverse_sel_rate": 0.2272,
+          "n_trades_mean": 17292.0
+        },
+        "conformal": {
+          "trade_coverage": 0.3751,
+          "hit_rate": 0.8469,
+          "pnl_per_trade": 0.6939,
+          "adverse_sel_rate": 0.1531,
+          "n_trades_mean": 11944.0
+        }
+      },
+      "ofi_gate": "DEFERRED \u2014 fold-9 MACC features (psi/OFI) not available for test split"
+    }
+  }
+}
