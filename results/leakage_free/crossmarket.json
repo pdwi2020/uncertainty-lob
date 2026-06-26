@@ -1,0 +1,458 @@
+{
+  "protocol": "leakage_free_anchored_fold9_seed0",
+  "source_note": "FI-2010 anchored walk-forward fold-9 checkpoints; no concatenation leakage",
+  "n_windows_per_market": 50000,
+  "markets": {
+    "BTC": {
+      "n": 50000,
+      "stat_pct": 0.5392,
+      "models": {
+        "deeplob": {
+          "accuracy": 0.3806,
+          "f1_macro": 0.3618,
+          "kappa": 0.077,
+          "ece": 0.3899
+        },
+        "tcn": {
+          "accuracy": 0.409,
+          "f1_macro": 0.3784,
+          "kappa": 0.0944,
+          "ece": 0.2905
+        },
+        "lob_transformer": {
+          "accuracy": 0.3864,
+          "f1_macro": 0.3616,
+          "kappa": 0.0698,
+          "ece": 0.3487
+        },
+        "cnn_lstm_attention": {
+          "accuracy": 0.4147,
+          "f1_macro": 0.372,
+          "kappa": 0.0823,
+          "ece": 0.3752
+        }
+      }
+    },
+    "ETH": {
+      "n": 50000,
+      "stat_pct": 0.471,
+      "models": {
+        "deeplob": {
+          "accuracy": 0.378,
+          "f1_macro": 0.3603,
+          "kappa": 0.0542,
+          "ece": 0.4013
+        },
+        "tcn": {
+          "accuracy": 0.384,
+          "f1_macro": 0.3672,
+          "kappa": 0.0706,
+          "ece": 0.3082
+        },
+        "lob_transformer": {
+          "accuracy": 0.3889,
+          "f1_macro": 0.3676,
+          "kappa": 0.069,
+          "ece": 0.367
+        },
+        "cnn_lstm_attention": {
+          "accuracy": 0.3829,
+          "f1_macro": 0.3606,
+          "kappa": 0.0518,
+          "ece": 0.4049
+        }
+      }
+    },
+    "SOL": {
+      "n": 50000,
+      "stat_pct": 0.5639,
+      "models": {
+        "deeplob": {
+          "accuracy": 0.4499,
+          "f1_macro": 0.3855,
+          "kappa": 0.0991,
+          "ece": 0.3591
+        },
+        "tcn": {
+          "accuracy": 0.5075,
+          "f1_macro": 0.4012,
+          "kappa": 0.1292,
+          "ece": 0.2536
+        },
+        "lob_transformer": {
+          "accuracy": 0.4696,
+          "f1_macro": 0.3928,
+          "kappa": 0.1085,
+          "ece": 0.3584
+        },
+        "cnn_lstm_attention": {
+          "accuracy": 0.4667,
+          "f1_macro": 0.3826,
+          "kappa": 0.095,
+          "ece": 0.372
+        }
+      }
+    },
+    "AAPL": {
+      "n": 50000,
+      "stat_pct": 0.7845,
+      "models": {
+        "deeplob": {
+          "accuracy": 0.4268,
+          "f1_macro": 0.2922,
+          "kappa": -0.0048,
+          "ece": 0.3521
+        },
+        "tcn": {
+          "accuracy": 0.5003,
+          "f1_macro": 0.32,
+          "kappa": 0.0142,
+          "ece": 0.1988
+        },
+        "lob_transformer": {
+          "accuracy": 0.4765,
+          "f1_macro": 0.3037,
+          "kappa": -0.0035,
+          "ece": 0.3297
+        },
+        "cnn_lstm_attention": {
+          "accuracy": 0.528,
+          "f1_macro": 0.3184,
+          "kappa": 0.0001,
+          "ece": 0.3012
+        }
+      }
+    }
+  },
+  "recalibration": {
+    "BTC": {
+      "deeplob": {
+        "ece_zs": 0.3899,
+        "K50": {
+          "ece": 0.0376,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.0377,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.0364,
+          "T": 8.25
+        },
+        "K5000": {
+          "ece": 0.0654,
+          "T": 5.5
+        },
+        "T_unbounded_K200": 5514.6
+      },
+      "tcn": {
+        "ece_zs": 0.2905,
+        "K50": {
+          "ece": 0.0327,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.033,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.0352,
+          "T": 6.0
+        },
+        "K5000": {
+          "ece": 0.0536,
+          "T": 3.75
+        },
+        "T_unbounded_K200": 72551.3
+      },
+      "lob_transformer": {
+        "ece_zs": 0.3487,
+        "K50": {
+          "ece": 0.044,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.0439,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.0435,
+          "T": 10.0
+        },
+        "K5000": {
+          "ece": 0.0413,
+          "T": 6.25
+        },
+        "T_unbounded_K200": 153442.8
+      },
+      "cnn_lstm_attention": {
+        "ece_zs": 0.3752,
+        "K50": {
+          "ece": 0.0325,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.0326,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.0349,
+          "T": 5.5
+        },
+        "K5000": {
+          "ece": 0.0679,
+          "T": 4.5
+        },
+        "T_unbounded_K200": 31707.5
+      }
+    },
+    "ETH": {
+      "deeplob": {
+        "ece_zs": 0.4013,
+        "K50": {
+          "ece": 0.0232,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.0231,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.0455,
+          "T": 7.0
+        },
+        "K5000": {
+          "ece": 0.0447,
+          "T": 7.25
+        },
+        "T_unbounded_K200": 17.6
+      },
+      "tcn": {
+        "ece_zs": 0.3082,
+        "K50": {
+          "ece": 0.0286,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.0285,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.026,
+          "T": 7.5
+        },
+        "K5000": {
+          "ece": 0.0214,
+          "T": 7.25
+        },
+        "T_unbounded_K200": 105.6
+      },
+      "lob_transformer": {
+        "ece_zs": 0.367,
+        "K50": {
+          "ece": 0.0343,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.0344,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.024,
+          "T": 7.75
+        },
+        "K5000": {
+          "ece": 0.0277,
+          "T": 7.0
+        },
+        "T_unbounded_K200": 26.3
+      },
+      "cnn_lstm_attention": {
+        "ece_zs": 0.4049,
+        "K50": {
+          "ece": 0.0185,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.0186,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.0424,
+          "T": 7.0
+        },
+        "K5000": {
+          "ece": 0.0503,
+          "T": 6.75
+        },
+        "T_unbounded_K200": 24.7
+      }
+    },
+    "SOL": {
+      "deeplob": {
+        "ece_zs": 0.3591,
+        "K50": {
+          "ece": 0.0237,
+          "T": 7.25
+        },
+        "K200": {
+          "ece": 0.0835,
+          "T": 3.5
+        },
+        "K1000": {
+          "ece": 0.0847,
+          "T": 3.5
+        },
+        "K5000": {
+          "ece": 0.0793,
+          "T": 3.75
+        },
+        "T_unbounded_K200": 3.6
+      },
+      "tcn": {
+        "ece_zs": 0.2536,
+        "K50": {
+          "ece": 0.0457,
+          "T": 4.25
+        },
+        "K200": {
+          "ece": 0.0698,
+          "T": 2.25
+        },
+        "K1000": {
+          "ece": 0.0486,
+          "T": 2.5
+        },
+        "K5000": {
+          "ece": 0.053,
+          "T": 2.5
+        },
+        "T_unbounded_K200": 2.3
+      },
+      "lob_transformer": {
+        "ece_zs": 0.3584,
+        "K50": {
+          "ece": 0.0673,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.0977,
+          "T": 3.0
+        },
+        "K1000": {
+          "ece": 0.1194,
+          "T": 2.75
+        },
+        "K5000": {
+          "ece": 0.0896,
+          "T": 3.25
+        },
+        "T_unbounded_K200": 3.0
+      },
+      "cnn_lstm_attention": {
+        "ece_zs": 0.372,
+        "K50": {
+          "ece": 0.0661,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.099,
+          "T": 3.25
+        },
+        "K1000": {
+          "ece": 0.1006,
+          "T": 3.25
+        },
+        "K5000": {
+          "ece": 0.109,
+          "T": 3.25
+        },
+        "T_unbounded_K200": 3.2
+      }
+    },
+    "AAPL": {
+      "deeplob": {
+        "ece_zs": 0.3521,
+        "K50": {
+          "ece": 0.035,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.0347,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.0347,
+          "T": 10.0
+        },
+        "K5000": {
+          "ece": 0.0425,
+          "T": 10.0
+        },
+        "T_unbounded_K200": 158570.9
+      },
+      "tcn": {
+        "ece_zs": 0.1988,
+        "K50": {
+          "ece": 0.1245,
+          "T": 10.0
+        },
+        "K200": {
+          "ece": 0.1251,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.128,
+          "T": 10.0
+        },
+        "K5000": {
+          "ece": 0.1401,
+          "T": 10.0
+        },
+        "T_unbounded_K200": 136425.1
+      },
+      "lob_transformer": {
+        "ece_zs": 0.3297,
+        "K50": {
+          "ece": 0.0909,
+          "T": 8.75
+        },
+        "K200": {
+          "ece": 0.0806,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.0828,
+          "T": 10.0
+        },
+        "K5000": {
+          "ece": 0.0905,
+          "T": 10.0
+        },
+        "T_unbounded_K200": 53762.1
+      },
+      "cnn_lstm_attention": {
+        "ece_zs": 0.3012,
+        "K50": {
+          "ece": 0.0756,
+          "T": 5.75
+        },
+        "K200": {
+          "ece": 0.1384,
+          "T": 10.0
+        },
+        "K1000": {
+          "ece": 0.1409,
+          "T": 10.0
+        },
+        "K5000": {
+          "ece": 0.0933,
+          "T": 6.0
+        },
+        "T_unbounded_K200": 24550.8
+      }
+    }
+  },
+  "recalibration_method": "global temperature scaling; T fit by NLL on first K target samples over grid [0.5,10], evaluated on remainder. T_unbounded_K200 records the uncapped LBFGS NLL-optimum to expose degeneracy (T>>1 => predictions collapse toward uniform; only SOL admits a well-behaved T~2-3)."
+}
