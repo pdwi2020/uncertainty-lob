@@ -20,7 +20,8 @@ up / stationary / down). The contributions are methodological:
   protocol duplicates the cumulative anchored-fold training windows 4.66× and
   inflates accuracy. Six architectures are re-benchmarked under a strict
   anchored walk-forward (nine folds, three seeds); the best reaches 68.9%,
-  against the 84–88% commonly reported.
+  against the 84–88% the base classifiers reach under the
+  concatenated protocol.
 - **EvLOB (primary).** A single-pass, microstructure-gated *evidential*
   architecture that reports epistemic (Dirichlet vacuity) and aleatoric
   uncertainty in one forward pass, with no Monte Carlo sampling or ensembles.
