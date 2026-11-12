@@ -91,7 +91,7 @@ def run_horizon(k: int, data_root: Path, ckpt_dir: Path, results_dir: Path,
     preds = np.concatenate(all_preds)
     labels = np.concatenate(all_labels)
     kappa = float(cohen_kappa_score(labels, preds))
-    report = classification_report(labels, preds, target_names=["down", "stationary", "up"])
+    report = classification_report(labels, preds, target_names=["up", "stationary", "down"])
     print(report)
 
     # Save val logits for calibration experiments

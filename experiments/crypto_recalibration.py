@@ -163,7 +163,7 @@ def load_target_logits(results_dir: Path, dset_type: str, sym: str, model_name: 
         return None, None
     d      = torch.load(path, map_location="cpu", weights_only=False)
     logits = d["logits"].float().numpy()
-    labels = d["labels"].long().numpy()
+    labels = 2 - d["labels"].long().numpy()   # targets use 2=up; FI-2010 models use 0=up
     return logits, labels
 
 

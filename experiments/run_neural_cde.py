@@ -185,7 +185,7 @@ def main():
     f1_wt  = float(f1_score(labels, preds, average="weighted", zero_division=0))
     kappa  = float(cohen_kappa_score(labels, preds))
 
-    print(classification_report(labels, preds, target_names=["down", "stationary", "up"]))
+    print(classification_report(labels, preds, target_names=["up", "stationary", "down"]))
     print(f"[NeuralCDE k={k}] acc={acc:.4f} f1_mac={f1_mac:.4f} kappa={kappa:.4f}")
 
     # Save val logits for calibration

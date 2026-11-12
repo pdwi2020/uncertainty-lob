@@ -135,7 +135,8 @@ def main():
             # Align: predictions start at index seq_len-1 in raw test array
             seq_len = 100
             signals = np.ones(len(test_feat), dtype=int)  # default: flat
-            signals[seq_len - 1 : seq_len - 1 + len(preds)] = preds
+            # FI-2010 classes are 0=up, 2=down; the simulator reads 0=down, 2=up
+            signals[seq_len - 1 : seq_len - 1 + len(preds)] = 2 - preds
 
         results_df = sim.simulate(mid_prices, signals, ofi)
         metrics = sim.compute_metrics(results_df)

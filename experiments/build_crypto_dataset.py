@@ -235,6 +235,7 @@ def run_inference(model: nn.Module, X: np.ndarray, device, batch_size=256):
 
 
 def compute_metrics(logits, Y):
+    Y = 2 - np.asarray(Y)   # targets use 2=up; FI-2010 models use 0=up
     preds = logits.argmax(1).numpy()
     return {
         "acc":         float((preds == Y).mean()),

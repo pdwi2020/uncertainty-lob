@@ -85,7 +85,7 @@ def run_model(model_name: str, k: int, data_root: Path, ckpt_dir: Path,
     preds = np.concatenate(all_preds)
     labels = np.concatenate(all_labels)
     kappa = float(cohen_kappa_score(labels, preds))
-    print(classification_report(labels, preds, target_names=["down", "stationary", "up"]))
+    print(classification_report(labels, preds, target_names=["up", "stationary", "down"]))
 
     # Save logits for calibration
     val_logits, val_labels = collect_logits(model, dm.val_dataloader(), device)

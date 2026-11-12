@@ -46,7 +46,8 @@ class MarketMakingSimulator:
 
         Args:
             mid_prices: (T,) mid-price time series.
-            signals: (T,) directional predictions: 0=down, 1=flat, 2=up.
+            signals: (T,) directional predictions: 0=down, 1=flat, 2=up. FI-2010
+                classes run the other way (0=up, 2=down); map them with 2 - y.
             ofi: (T,) order flow imbalance for adverse selection detection.
 
         Returns:

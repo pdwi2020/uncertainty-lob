@@ -84,7 +84,7 @@ T_PLOT = 2000
 mid = (features[:T_PLOT, _col(1, "bid_price")] + features[:T_PLOT, _col(1, "ask_price")]) / 2
 labels_k10 = (labels_all[:T_PLOT, 4] - 1).astype(int)  # 0-indexed
 
-cls_colors = {0: "#F44336", 1: "#9E9E9E", 2: "#4CAF50"}
+cls_colors = {0: "#4CAF50", 1: "#9E9E9E", 2: "#F44336"}   # FI-2010: 0=up, 2=down
 
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 6), sharex=True, gridspec_kw={"height_ratios": [3, 1]})
 ax1.plot(mid, color="#1976D2", linewidth=0.8)
@@ -96,7 +96,7 @@ for i in range(T_PLOT - 1):
     ax2.axvspan(i, i + 1, alpha=0.7, color=cls_colors[labels_k10[i]], linewidth=0)
 ax2.set_yticks([])
 ax2.legend(
-    handles=[Patch(color=cls_colors[c], label=n) for c, n in zip([0, 1, 2], ["Down", "Stationary", "Up"])],
+    handles=[Patch(color=cls_colors[c], label=n) for c, n in zip([0, 1, 2], ["Up", "Stationary", "Down"])],
     loc="upper right", fontsize=8,
 )
 ax2.set_xlabel("Time step")
@@ -120,8 +120,8 @@ for tf in train_files:
             counts[hi, ci] += int((lbl[:, hi] == ci + 1).sum())
 
 fig, axes = plt.subplots(1, 5, figsize=(15, 4), sharey=True)
-bar_colors = ["#F44336", "#9E9E9E", "#4CAF50"]
-bar_labels = ["Down", "Stationary", "Up"]
+bar_colors = ["#4CAF50", "#9E9E9E", "#F44336"]
+bar_labels = ["Up", "Stationary", "Down"]   # raw labels 1, 2, 3
 for i, (ax, h) in enumerate(zip(axes, horizons)):
     total = counts[i].sum()
     pcts = counts[i] / total * 100

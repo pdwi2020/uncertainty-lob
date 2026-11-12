@@ -1,40 +1,41 @@
 {
   "regime_ts": {
     "deeplob": {
-      "T_global": 1.388,
-      "T_low": 1.301,
-      "T_high": 1.482,
-      "ECE_raw": 0.0823,
-      "ECE_gT": 0.0171,
-      "ECE_rT": 0.0167,
+      "T_global": 1.3878164866098477,
+      "T_low": 1.3013739758048684,
+      "T_high": 1.48228523871503,
+      "ECE_raw": 0.08228947210476883,
+      "ECE_gT": 0.01710271084172686,
+      "ECE_rT": 0.01671828551545002,
       "n_val": 36141
     },
     "tcn": {
-      "T_global": 1.199,
-      "T_low": 1.156,
-      "T_high": 1.264,
-      "ECE_raw": 0.0264,
-      "ECE_gT": 0.0129,
-      "ECE_rT": 0.012,
+      "T_global": 1.2469254099983207,
+      "T_low": 1.2144497143785686,
+      "T_high": 1.282205185942844,
+      "ECE_raw": 0.049765934253134345,
+      "ECE_gT": 0.0037167848808617766,
+      "ECE_rT": 0.004509629427657679,
       "n_val": 36141
     },
     "lob_transformer": {
-      "T_global": 1.186,
-      "T_low": 1.028,
-      "T_high": 1.432,
-      "ECE_raw": 0.0072,
-      "ECE_gT": 0.027,
-      "ECE_rT": 0.0284,
+      "T_global": 1.283084167649083,
+      "T_low": 1.2692878235787597,
+      "T_high": 1.2989937679964838,
+      "ECE_raw": 0.05361839320408527,
+      "ECE_gT": 0.007549364184767636,
+      "ECE_rT": 0.007690683765877298,
       "n_val": 36141
     },
     "cnn_lstm_attention": {
-      "T_global": 1.34,
-      "T_low": 1.287,
-      "T_high": 1.401,
-      "ECE_raw": 0.0708,
-      "ECE_gT": 0.0101,
-      "ECE_rT": 0.0094,
+      "T_global": 1.3395393750285391,
+      "T_low": 1.2866386598376842,
+      "T_high": 1.4011057901538813,
+      "ECE_raw": 0.07082331164591062,
+      "ECE_gT": 0.010117578522949212,
+      "ECE_rT": 0.009371536974949966,
       "n_val": 36141
     }
-  }
+  },
+  "note": "Recomputed 2026-11-11 after retraining the fold-9 seed-0 tcn/lob_transformer/lob_transformer_v2/rac_moe runs, which had been 3-epoch smoke tests; scripts in X9 runs/protocol_v2_long_smokefix_20261111/"
 }

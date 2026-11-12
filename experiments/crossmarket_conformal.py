@@ -157,6 +157,7 @@ def main():
             ck = torch.load(lgp, map_location="cpu", weights_only=False)
             logits = ck["logits"].float()
             labels = ck["labels"].long().numpy() if "labels" in ck else Y
+            labels = 2 - labels   # targets use 2=up; FI-2010 models use 0=up
             probs = F.softmax(logits, dim=-1).numpy()
             n = len(labels)
             if n != len(Y):

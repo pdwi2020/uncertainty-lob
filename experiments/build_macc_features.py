@@ -22,7 +22,7 @@ Feature definitions:
   depth_imb = (bid_v1 - ask_v1) / (bid_v1 + ask_v1 + 1e-8)  [L1 depth imbalance]
   vol_ratio = short_vol_60 / (long_vol_600 + 1e-8)           [vol regime signal]
   ofi_lk    = (bid_vk - ask_vk) / (bid_vk + ask_vk + 1e-8)  [per-level OFI proxy]
-  toxicity ψ = sigmoid(|ofi_mean| * 3 + spread_norm * 2)     [in (0,1)]
+  toxicity ψ = sigmoid(3|ofi_mean| + 2|spread_norm| + |depth_imb|)  [in (0,1)]
 
 Usage:
   python experiments/build_macc_features.py

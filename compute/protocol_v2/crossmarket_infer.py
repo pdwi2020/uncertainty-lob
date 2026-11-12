@@ -18,8 +18,11 @@ Source checkpoints (fold 9, seed 0, micro=none):
   deeplob, cnn_lstm_attention, tcn  -> X9 protocol_v2_long campaign (Arti)
   lob_transformer                   -> /tmp/lobt_full (local MPS re-run)
 
+Target labels (2=up) are mapped to the FI-2010 order (0=up) before scoring.
+
 Outputs:
-  results/leakage_free/crossmarket.json   (paper numbers; tracked in repo)
+  results/leakage_free/crossmarket_infer.json   (this script's own summary; the paper's
+      crossmarket.json is written by smokefix_20261111/, from the retrained TCN)
   /tmp/dl_paper_crossmarket/<MKT>_<model>_logits.pt   (for optional conformal driver)
 """
 
@@ -32,7 +35,7 @@ import torch
 import torch.nn.functional as F
 from sklearn.metrics import cohen_kappa_score, f1_score
 
-REPO = Path("/Users/paritoshdwivedi/uncertainty-lob")
+REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
 
 from src.models.deeplob import DeepLOB                         # noqa: E402
@@ -44,7 +47,8 @@ X9 = Path("/Volumes/Crucial X9/Research Projects/DL_Paper")
 FEAT_DIR = X9 / "results"
 CAMPAIGN = X9 / "experiments/new/DL_Paper_v2_complete/runs/protocol_v2_long"
 
-OUT_JSON = REPO / "results/leakage_free/crossmarket.json"
+# results/leakage_free/crossmarket.json itself is written by smokefix_20261111/write_results.py
+OUT_JSON = REPO / "results/leakage_free/crossmarket_infer.json"
 LOGIT_DIR = Path("/tmp/dl_paper_crossmarket")
 LOGIT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -191,7 +195,8 @@ def main():
     for mkt, fname in MARKETS.items():
         d = np.load(FEAT_DIR / fname, mmap_mode="r")
         X = np.asarray(d["X"], dtype=np.float32)
-        Y = np.asarray(d["Y"]).astype(np.int64)
+        Y = np.asarray(d["Y"]).astype(np.int64)   # saved as-is (target order, 2=up)
+        Y_fi = 2 - Y   # targets use 2=up; FI-2010 models use 0=up
         stat_pct = float((Y == 1).mean())
         summary["markets"][mkt] = {"n": int(len(Y)), "stat_pct": round(stat_pct, 4), "models": {}}
         summary["recalibration"][mkt] = {}
@@ -203,9 +208,9 @@ def main():
             logits = infer_logits(models[name], X).numpy()
             torch.save({"logits": torch.from_numpy(logits), "labels": torch.from_numpy(Y)},
                        LOGIT_DIR / f"{mkt}_{name}_logits.pt")
-            m = metrics_from_logits(logits, Y)
+            m = metrics_from_logits(logits, Y_fi)
             summary["markets"][mkt]["models"][name] = {k: round(v, 4) for k, v in m.items()}
-            rc = recalibrate(logits, Y)
+            rc = recalibrate(logits, Y_fi)
             summary["recalibration"][mkt][name] = rc
             kbest = rc.get("K200", {})
             print(f"  {name:20s} acc={m['accuracy']:.3f} F1={m['f1_macro']:.3f} "

@@ -1,0 +1,6 @@
+# outputs of the scripts in this folder
+*.json
+*.txt
+*.npz
+stage_*/
+out_*/

@@ -117,14 +117,15 @@ def _reconstruct_1s_snapshots(df: pd.DataFrame, n_levels: int = 10) -> pd.DataFr
 # ── Label generation ──────────────────────────────────────────────────────────
 
 def _compute_labels(df: pd.DataFrame, horizon: int = 10, alpha: float = 2e-4) -> pd.Series:
-    """Generate 3-class mid-price movement labels matching FI-2010 protocol.
+    """Generate 3-class mid-price movement labels following the FI-2010 labelling rule.
 
     Label at time t: based on smoothed future mid-price over next k seconds.
       up (2)        if (m_future - m_t) / m_t >  alpha
       down (0)      if (m_future - m_t) / m_t < -alpha
       stationary (1) otherwise
 
-    Uses same label encoding as FI-2010: {0=down, 1=stationary, 2=up} (0-indexed).
+    Encoding {0=down, 1=stationary, 2=up} (0-indexed). This is the REVERSE of FI-2010
+    (0=up, 2=down): map with y -> 2 - y before scoring FI-2010-trained models.
     """
     mid = (df['ask_p1'] + df['bid_p1']) / 2.0
     # Smoothed future mid: mean of next k seconds

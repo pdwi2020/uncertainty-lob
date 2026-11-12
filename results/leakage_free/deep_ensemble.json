@@ -13,9 +13,9 @@
     ],
     "fold": 9,
     "n_test": 31838,
-    "accuracy": 0.7528,
-    "ece": 0.0452,
-    "kappa": 0.6273
+    "accuracy": 0.7595,
+    "ece": 0.0193,
+    "kappa": 0.6373
   },
   "ensemble_3model_3seeds": {
     "models": [
@@ -30,8 +30,9 @@
     ],
     "fold": 9,
     "n_test": 31838,
-    "accuracy": 0.7507,
-    "ece": 0.0504,
-    "kappa": 0.6242
-  }
+    "accuracy": 0.759,
+    "ece": 0.0168,
+    "kappa": 0.6365
+  },
+  "note": "Recomputed 2026-11-11 after retraining the fold-9 seed-0 tcn/lob_transformer/lob_transformer_v2/rac_moe runs, which had been 3-epoch smoke tests; scripts in X9 runs/protocol_v2_long_smokefix_20261111/"
 }

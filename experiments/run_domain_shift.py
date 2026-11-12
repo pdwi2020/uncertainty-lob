@@ -286,10 +286,11 @@ def main():
         model = model.to(device)
 
         preds = run_inference(model, X, args.batch_size, device)
-        acc   = float((preds == Y).mean())
-        f1_mac = float(f1_score(Y, preds, average="macro",    zero_division=0))
-        f1_wt  = float(f1_score(Y, preds, average="weighted", zero_division=0))
-        kappa  = float(cohen_kappa_score(Y, preds))
+        y_fi  = 2 - Y   # targets use 2=up; FI-2010 models use 0=up
+        acc   = float((preds == y_fi).mean())
+        f1_mac = float(f1_score(y_fi, preds, average="macro",    zero_division=0))
+        f1_wt  = float(f1_score(y_fi, preds, average="weighted", zero_division=0))
+        kappa  = float(cohen_kappa_score(y_fi, preds))
 
         fi_acc = fi2010_ref.get(model_name, None)
         drop   = round((fi_acc - acc) * 100, 2) if fi_acc else None

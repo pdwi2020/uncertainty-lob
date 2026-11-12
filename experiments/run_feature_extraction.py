@@ -121,7 +121,7 @@ window = 50
 ofi_smooth = np.convolve(ofi[:T2], np.ones(window) / window, mode="same")
 labels_aligned = labels_k10[1:T2 + 1]  # labels aligned to OFI (starts at t=1)
 
-cls_colors = {0: "#F44336", 1: "#9E9E9E", 2: "#4CAF50"}
+cls_colors = {0: "#4CAF50", 1: "#9E9E9E", 2: "#F44336"}   # FI-2010: 0=up, 2=down
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 7), sharex=True, gridspec_kw={"height_ratios": [2, 1]})
 ax1.plot(ofi_smooth, color="#8E24AA", linewidth=0.8)
 ax1.axhline(0, color="black", linewidth=0.5, linestyle="--")
@@ -133,7 +133,7 @@ for cls, color in cls_colors.items():
     mask = labels_aligned == cls
     ax2.scatter(np.where(mask)[0], np.full(mask.sum(), cls), c=color, s=1, alpha=0.25)
 ax2.set_yticks([0, 1, 2])
-ax2.set_yticklabels(["Down", "Stat.", "Up"], fontsize=8)
+ax2.set_yticklabels(["Up", "Stat.", "Down"], fontsize=8)
 ax2.set_xlabel("Time step")
 ax2.set_title("k=10 label", fontsize=9)
 plt.tight_layout()

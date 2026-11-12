@@ -9,7 +9,10 @@ from typing import List, Optional, Tuple
 # FI-2010: data shape on disk is (149, N_samples).
 # Rows 0-39:   40 LOB features (10 levels × {bid_price, bid_vol, ask_price, ask_vol})
 # Rows 40-143: additional technical indicators (unused)
-# Rows 144-148: labels at k=1,2,3,5,10 horizons; values 1=down, 2=stationary, 3=up (1-indexed)
+# Rows 144-148: labels at k=1,2,3,5,10 horizons; values 1=up, 2=stationary, 3=down (1-indexed).
+# Direction checked against the DecPre prices: 76% of label-1 windows move up, 73% of label-3
+# windows move down. The crypto/LOBSTER builders use the opposite order (2=up), so their labels
+# must be mapped with y -> 2 - y before FI-2010-trained models are scored on them.
 _HORIZON_IDX = {1: 0, 2: 1, 3: 2, 5: 3, 10: 4}
 _LABEL_ROW_START = 144
 _N_FEATURES = 40
@@ -45,7 +48,7 @@ class FI2010Dataset(Dataset):
 
     Features: 40 (10 LOB levels × 4 fields)
     Sequence length: 100 time steps (sliding window, stride=1)
-    Labels: 3-class (0=down, 1=stationary, 2=up) at horizon k
+    Labels: 3-class (0=up, 1=stationary, 2=down) at horizon k
     Protocol: NoAuction/Zscore
     """
 
@@ -60,7 +63,7 @@ class FI2010Dataset(Dataset):
         self.sequence_length = sequence_length
         horizon_idx = _HORIZON_IDX[horizon]
         self.features = features.astype(np.float32)           # (N, 40)
-        # Convert 1-indexed labels to 0-indexed (0=down, 1=stationary, 2=up)
+        # Convert 1-indexed labels to 0-indexed (0=up, 1=stationary, 2=down)
         self.labels = (labels[:, horizon_idx] - 1).astype(np.int64)  # (N,)
 
     def __len__(self) -> int:
@@ -145,7 +148,7 @@ class FI2010DataModule:
 
     @property
     def label_counts(self) -> dict:
-        """Class distribution in training set (0=down, 1=stationary, 2=up)."""
+        """Class distribution in training set (0=up, 1=stationary, 2=down)."""
         self._setup()
         counts = np.bincount(self._train_ds.labels, minlength=3)
         return {0: int(counts[0]), 1: int(counts[1]), 2: int(counts[2])}

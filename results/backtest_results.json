@@ -8,32 +8,32 @@
     "n_adverse_fills": 14459
   },
   "deeplob": {
-    "sharpe": -14.18757760658449,
-    "total_pnl": -164.9210662841797,
+    "sharpe": -14.11680321148235,
+    "total_pnl": -164.1085205078125,
     "fill_rate": 0.20833990936351543,
     "adverse_rate": 0.19559277095395272,
     "n_fills": 73924,
     "n_adverse_fills": 14459
   },
   "tcn": {
-    "sharpe": -14.180433838846671,
-    "total_pnl": -164.84991455078125,
+    "sharpe": -14.12394697922017,
+    "total_pnl": -164.18023681640625,
     "fill_rate": 0.20833990936351543,
     "adverse_rate": 0.19559277095395272,
     "n_fills": 73924,
     "n_adverse_fills": 14459
   },
   "lob_transformer": {
-    "sharpe": -14.173492556710956,
-    "total_pnl": -164.78536987304688,
+    "sharpe": -14.130895830911104,
+    "total_pnl": -164.2442169189453,
     "fill_rate": 0.20833990936351543,
     "adverse_rate": 0.19559277095395272,
     "n_fills": 73924,
     "n_adverse_fills": 14459
   },
   "cnn_lstm_attention": {
-    "sharpe": -14.185347426378128,
-    "total_pnl": -164.89190673828125,
+    "sharpe": -14.119038122660726,
+    "total_pnl": -164.13743591308594,
     "fill_rate": 0.20833990936351543,
     "adverse_rate": 0.19559277095395272,
     "n_fills": 73924,

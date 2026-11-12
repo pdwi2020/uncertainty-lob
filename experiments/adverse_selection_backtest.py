@@ -9,7 +9,7 @@ Ladder evaluated on the same eval split as E2a (val 50/50 calib→eval):
   3. conformal    — + require |C(x)| = 1 (singleton set, toxicity_closed q̂/λ from E2a)
   4. ofi_gate     — + require sign(OFI_l1) agrees with predicted direction  ← PROPOSED
 
-Labels: 0=down, 1=stationary, 2=up.
+Labels: FI-2010 order, 0=up, 1=stationary, 2=down.
 Directions: up prediction → long (OFI_l1 > 0 agrees); down prediction → short (OFI_l1 < 0 agrees).
 
 Metrics per filter per model:
@@ -50,6 +50,8 @@ RESULTS = ROOT / "results"
 SAMPLES_PER_DAY = 16_000   # FI-2010 active trading period estimate (annualization anchor)
 CONF_THRESHOLD  = 0.60     # softmax confidence threshold for filter 2
 STAT_CLASS      = 1        # label for "stationary" (no trade)
+UP_CLASS        = 0        # FI-2010: raw label 1 = up   -> class 0
+DOWN_CLASS      = 2        # FI-2010: raw label 3 = down -> class 2
 OFI_L1_IDX      = 3        # column index of ofi_l1 in 7-dim microstructure vector
 
 
@@ -195,10 +197,10 @@ def filter_ofi_gate(
     base_signal = filter_conformal(probs, psi, q_hat, lam)
     ofi_l1 = m[:, OFI_L1_IDX]
 
-    # OFI agreement: up prediction (class 2) needs ofi_l1 > 0,
-    #                down prediction (class 0) needs ofi_l1 < 0
-    up_agree   = (base_signal == 2) & (ofi_l1 > 0)
-    down_agree = (base_signal == 0) & (ofi_l1 < 0)
+    # OFI agreement: an up prediction needs bid-heavy flow (ofi_l1 > 0),
+    #                a down prediction needs ask-heavy flow (ofi_l1 < 0)
+    up_agree   = (base_signal == UP_CLASS) & (ofi_l1 > 0)
+    down_agree = (base_signal == DOWN_CLASS) & (ofi_l1 < 0)
     signal = np.where(up_agree | down_agree, base_signal, -1)
     return signal
 
