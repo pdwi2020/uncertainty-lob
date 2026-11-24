@@ -2,8 +2,7 @@
 
 Code accompanying the paper **"Microstructure-Grounded Uncertainty for Limit
 Order Book Forecasting: A Single-Pass Evidential Model and a Leakage-Free
-Benchmark"** (manuscript under review, *IEEE Transactions on Neural Networks and
-Learning Systems*).
+Benchmark"** (manuscript submitted to *IEEE Access*).
 
 > This repository contains the **source code and experiment drivers only**. The
 > manuscript, figures, literature PDFs, trained checkpoints, and the FI-2010 data
@@ -164,8 +163,7 @@ whose README lists the steps.
   title   = {Microstructure-Grounded Uncertainty for Limit Order Book
              Forecasting: A Single-Pass Evidential Model and a
              Leakage-Free Benchmark},
-  journal = {Manuscript under review, IEEE Transactions on Neural Networks
-             and Learning Systems},
+  journal = {Manuscript submitted to IEEE Access},
   year    = {2026}
 }
 ```
@@ -178,5 +176,5 @@ whose README lists the steps.
 
 ## License
 
-Private repository; all rights reserved. The code will be released under an
-open-source license upon publication of the paper.
+All rights reserved for now. The code will be released under an open-source
+license when the paper is published.
