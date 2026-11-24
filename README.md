@@ -170,8 +170,8 @@ whose README lists the steps.
 
 ## Authors
 
-- **Paritosh Dwivedi** (first author), VIT University, Vellore, India
-- **Arti Tiwari** (corresponding author), VIT University, Vellore, India ·
+- **Paritosh Dwivedi** (first author), Vellore Institute of Technology, Vellore, India
+- **Arti Tiwari** (corresponding author), Vellore Institute of Technology, Vellore, India ·
   `arti.tiwari@vit.ac.in`
 
 ## License
