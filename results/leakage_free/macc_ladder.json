@@ -1,0 +1,479 @@
+{
+  "regime_rule": "v_ratio above its calibration-half median (fold-9 validation)",
+  "split": "q-hat fitted on the first half of the fold-9 validation split, coverage on the second",
+  "models": {
+    "deeplob": {
+      "split": "val_calib\u2192val_eval",
+      "alpha": 0.1,
+      "lambda_star": 0.04,
+      "methods": {
+        "lac": {
+          "marginal_coverage": 0.8765,
+          "mean_set_size": 1.942,
+          "singleton_rate": 0.3569,
+          "coverage_gap": 0.0141,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8685,
+              "n": 7796,
+              "mean_set_size": 1.9629,
+              "singleton": 0.3509
+            },
+            "high_vol": {
+              "coverage": 0.8826,
+              "n": 10275,
+              "mean_set_size": 1.926,
+              "singleton": 0.3615
+            }
+          },
+          "q_hat": 0.8674
+        },
+        "entropy": {
+          "marginal_coverage": 0.8765,
+          "mean_set_size": 1.942,
+          "singleton_rate": 0.3569,
+          "coverage_gap": 0.0141,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8685,
+              "n": 7796,
+              "mean_set_size": 1.9629,
+              "singleton": 0.3509
+            },
+            "high_vol": {
+              "coverage": 0.8826,
+              "n": 10275,
+              "mean_set_size": 1.926,
+              "singleton": 0.3615
+            }
+          },
+          "q_hat": 0.8674
+        },
+        "toxicity_closed": {
+          "marginal_coverage": 0.8781,
+          "mean_set_size": 1.9489,
+          "singleton_rate": 0.3542,
+          "coverage_gap": 0.0151,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8695,
+              "n": 7796,
+              "mean_set_size": 1.9673,
+              "singleton": 0.3501
+            },
+            "high_vol": {
+              "coverage": 0.8846,
+              "n": 10275,
+              "mean_set_size": 1.9349,
+              "singleton": 0.3573
+            }
+          },
+          "q_hat": 0.8942
+        },
+        "lac_mondrian": {
+          "marginal_coverage": 0.8767,
+          "mean_set_size": 1.9479,
+          "singleton_rate": 0.3543,
+          "coverage_gap": 0.027,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8613,
+              "n": 7796,
+              "mean_set_size": 1.9359,
+              "singleton": 0.3615
+            },
+            "high_vol": {
+              "coverage": 0.8883,
+              "n": 10275,
+              "mean_set_size": 1.957,
+              "singleton": 0.3488
+            }
+          },
+          "q_hat_per_regime": {
+            "0": 0.8625,
+            "1": 0.8724
+          }
+        },
+        "toxicity_mondrian": {
+          "marginal_coverage": 0.8776,
+          "mean_set_size": 1.9525,
+          "singleton_rate": 0.352,
+          "coverage_gap": 0.0253,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8633,
+              "n": 7796,
+              "mean_set_size": 1.9425,
+              "singleton": 0.3595
+            },
+            "high_vol": {
+              "coverage": 0.8886,
+              "n": 10275,
+              "mean_set_size": 1.96,
+              "singleton": 0.3463
+            }
+          },
+          "q_hat_per_regime": {
+            "0": 0.8891,
+            "1": 0.8982
+          }
+        }
+      }
+    },
+    "tcn": {
+      "split": "val_calib\u2192val_eval",
+      "alpha": 0.1,
+      "lambda_star": 0.0,
+      "methods": {
+        "lac": {
+          "marginal_coverage": 0.8863,
+          "mean_set_size": 1.78,
+          "singleton_rate": 0.4342,
+          "coverage_gap": 0.0052,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8893,
+              "n": 7796,
+              "mean_set_size": 1.7345,
+              "singleton": 0.4637
+            },
+            "high_vol": {
+              "coverage": 0.8841,
+              "n": 10275,
+              "mean_set_size": 1.8145,
+              "singleton": 0.4118
+            }
+          },
+          "q_hat": 0.8531
+        },
+        "entropy": {
+          "marginal_coverage": 0.8863,
+          "mean_set_size": 1.78,
+          "singleton_rate": 0.4342,
+          "coverage_gap": 0.0052,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8893,
+              "n": 7796,
+              "mean_set_size": 1.7345,
+              "singleton": 0.4637
+            },
+            "high_vol": {
+              "coverage": 0.8841,
+              "n": 10275,
+              "mean_set_size": 1.8145,
+              "singleton": 0.4118
+            }
+          },
+          "q_hat": 0.8531
+        },
+        "toxicity_closed": {
+          "marginal_coverage": 0.8863,
+          "mean_set_size": 1.78,
+          "singleton_rate": 0.4342,
+          "coverage_gap": 0.0052,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8893,
+              "n": 7796,
+              "mean_set_size": 1.7345,
+              "singleton": 0.4637
+            },
+            "high_vol": {
+              "coverage": 0.8841,
+              "n": 10275,
+              "mean_set_size": 1.8145,
+              "singleton": 0.4118
+            }
+          },
+          "q_hat": 0.8531
+        },
+        "lac_mondrian": {
+          "marginal_coverage": 0.8857,
+          "mean_set_size": 1.7789,
+          "singleton_rate": 0.4365,
+          "coverage_gap": 0.0137,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8779,
+              "n": 7796,
+              "mean_set_size": 1.6714,
+              "singleton": 0.4938
+            },
+            "high_vol": {
+              "coverage": 0.8916,
+              "n": 10275,
+              "mean_set_size": 1.8605,
+              "singleton": 0.393
+            }
+          },
+          "q_hat_per_regime": {
+            "0": 0.8384,
+            "1": 0.8621
+          }
+        },
+        "toxicity_mondrian": {
+          "marginal_coverage": 0.8857,
+          "mean_set_size": 1.7789,
+          "singleton_rate": 0.4365,
+          "coverage_gap": 0.0137,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8779,
+              "n": 7796,
+              "mean_set_size": 1.6714,
+              "singleton": 0.4938
+            },
+            "high_vol": {
+              "coverage": 0.8916,
+              "n": 10275,
+              "mean_set_size": 1.8605,
+              "singleton": 0.393
+            }
+          },
+          "q_hat_per_regime": {
+            "0": 0.8384,
+            "1": 0.8621
+          }
+        }
+      }
+    },
+    "lob_transformer": {
+      "split": "val_calib\u2192val_eval",
+      "alpha": 0.1,
+      "lambda_star": 0.0,
+      "methods": {
+        "lac": {
+          "marginal_coverage": 0.8993,
+          "mean_set_size": 1.9575,
+          "singleton_rate": 0.3119,
+          "coverage_gap": 0.0039,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9015,
+              "n": 7796,
+              "mean_set_size": 1.861,
+              "singleton": 0.3961
+            },
+            "high_vol": {
+              "coverage": 0.8976,
+              "n": 10275,
+              "mean_set_size": 2.0308,
+              "singleton": 0.2481
+            }
+          },
+          "q_hat": 0.8743
+        },
+        "entropy": {
+          "marginal_coverage": 0.8993,
+          "mean_set_size": 1.9575,
+          "singleton_rate": 0.3119,
+          "coverage_gap": 0.0039,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9015,
+              "n": 7796,
+              "mean_set_size": 1.861,
+              "singleton": 0.3961
+            },
+            "high_vol": {
+              "coverage": 0.8976,
+              "n": 10275,
+              "mean_set_size": 2.0308,
+              "singleton": 0.2481
+            }
+          },
+          "q_hat": 0.8743
+        },
+        "toxicity_closed": {
+          "marginal_coverage": 0.8993,
+          "mean_set_size": 1.9575,
+          "singleton_rate": 0.3119,
+          "coverage_gap": 0.0039,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.9015,
+              "n": 7796,
+              "mean_set_size": 1.861,
+              "singleton": 0.3961
+            },
+            "high_vol": {
+              "coverage": 0.8976,
+              "n": 10275,
+              "mean_set_size": 2.0308,
+              "singleton": 0.2481
+            }
+          },
+          "q_hat": 0.8743
+        },
+        "lac_mondrian": {
+          "marginal_coverage": 0.9006,
+          "mean_set_size": 1.9568,
+          "singleton_rate": 0.3141,
+          "coverage_gap": 0.0176,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8906,
+              "n": 7796,
+              "mean_set_size": 1.7896,
+              "singleton": 0.4278
+            },
+            "high_vol": {
+              "coverage": 0.9082,
+              "n": 10275,
+              "mean_set_size": 2.0837,
+              "singleton": 0.2279
+            }
+          },
+          "q_hat_per_regime": {
+            "0": 0.8604,
+            "1": 0.8836
+          }
+        },
+        "toxicity_mondrian": {
+          "marginal_coverage": 0.9006,
+          "mean_set_size": 1.9568,
+          "singleton_rate": 0.3141,
+          "coverage_gap": 0.0176,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8906,
+              "n": 7796,
+              "mean_set_size": 1.7896,
+              "singleton": 0.4278
+            },
+            "high_vol": {
+              "coverage": 0.9082,
+              "n": 10275,
+              "mean_set_size": 2.0837,
+              "singleton": 0.2279
+            }
+          },
+          "q_hat_per_regime": {
+            "0": 0.8604,
+            "1": 0.8836
+          }
+        }
+      }
+    },
+    "cnn_lstm_attention": {
+      "split": "val_calib\u2192val_eval",
+      "alpha": 0.1,
+      "lambda_star": 0.04,
+      "methods": {
+        "lac": {
+          "marginal_coverage": 0.8908,
+          "mean_set_size": 1.9723,
+          "singleton_rate": 0.3565,
+          "coverage_gap": 0.0007,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8912,
+              "n": 7796,
+              "mean_set_size": 1.9261,
+              "singleton": 0.4024
+            },
+            "high_vol": {
+              "coverage": 0.8905,
+              "n": 10275,
+              "mean_set_size": 2.0073,
+              "singleton": 0.3218
+            }
+          },
+          "q_hat": 0.8659
+        },
+        "entropy": {
+          "marginal_coverage": 0.8908,
+          "mean_set_size": 1.9723,
+          "singleton_rate": 0.3565,
+          "coverage_gap": 0.0007,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8912,
+              "n": 7796,
+              "mean_set_size": 1.9261,
+              "singleton": 0.4024
+            },
+            "high_vol": {
+              "coverage": 0.8905,
+              "n": 10275,
+              "mean_set_size": 2.0073,
+              "singleton": 0.3218
+            }
+          },
+          "q_hat": 0.8659
+        },
+        "toxicity_closed": {
+          "marginal_coverage": 0.8925,
+          "mean_set_size": 1.9843,
+          "singleton_rate": 0.3526,
+          "coverage_gap": 0.0008,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.892,
+              "n": 7796,
+              "mean_set_size": 1.9369,
+              "singleton": 0.3983
+            },
+            "high_vol": {
+              "coverage": 0.8928,
+              "n": 10275,
+              "mean_set_size": 2.0202,
+              "singleton": 0.318
+            }
+          },
+          "q_hat": 0.8933
+        },
+        "lac_mondrian": {
+          "marginal_coverage": 0.8917,
+          "mean_set_size": 1.982,
+          "singleton_rate": 0.3534,
+          "coverage_gap": 0.0209,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8798,
+              "n": 7796,
+              "mean_set_size": 1.8706,
+              "singleton": 0.4233
+            },
+            "high_vol": {
+              "coverage": 0.9007,
+              "n": 10275,
+              "mean_set_size": 2.0665,
+              "singleton": 0.3003
+            }
+          },
+          "q_hat_per_regime": {
+            "0": 0.8558,
+            "1": 0.8762
+          }
+        },
+        "toxicity_mondrian": {
+          "marginal_coverage": 0.8933,
+          "mean_set_size": 1.9926,
+          "singleton_rate": 0.3503,
+          "coverage_gap": 0.0205,
+          "per_regime": {
+            "low_vol": {
+              "coverage": 0.8816,
+              "n": 7796,
+              "mean_set_size": 1.8796,
+              "singleton": 0.4209
+            },
+            "high_vol": {
+              "coverage": 0.9021,
+              "n": 10275,
+              "mean_set_size": 2.0783,
+              "singleton": 0.2967
+            }
+          },
+          "q_hat_per_regime": {
+            "0": 0.8831,
+            "1": 0.9032
+          }
+        }
+      }
+    }
+  },
+  "note": "Recomputed 2026-11-11 after retraining the fold-9 seed-0 tcn/lob_transformer/lob_transformer_v2/rac_moe runs, which had been 3-epoch smoke tests; scripts in X9 runs/protocol_v2_long_smokefix_20261111/"
+}

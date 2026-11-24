@@ -4,8 +4,8 @@ Four of the 162 anchored runs (`tcn`, `lob_transformer`, `lob_transformer_v2`, `
 fold 9 seed 0) had been left as 3-epoch smoke tests, because `kaggle_campaign.py` skips any run
 whose summary says "completed". They were retrained for 80 epochs on a Kaggle T4 with the
 unchanged `../anchored_runner.py`, and every leakage-free result that depended on them was
-recomputed. The scripts here produced the ten affected files in `results/leakage_free/`.
-`write_results.py` regenerates all ten byte for byte from the intermediate outputs.
+recomputed. The scripts here produced the eleven affected files in `results/leakage_free/`.
+`write_results.py` regenerates all eleven byte for byte from the intermediate outputs.
 
 Run data is not in the repository. `common.py` reads it from `LF_RUNS` (original campaign
 runs) and `LF_RETRAINED_RUNS` (the four retrains); both default to the paths on the project drive.
@@ -21,10 +21,10 @@ original runs (regression check), `new` swaps in the retrains.
 | Regime-conditional accuracy, regime TS | `regime_lf.py new` | `regime_new.json` |
 | Fold-9 microstructure features | `fold9_features.py` | `fold9_val_features.npz` |
 | Stage the conformal inputs | `stage_conformal.py {new,leaky} {vr_median,hmm}` | `stage_*/` |
-| MACC ladder, learned gate, APS/RAPS | `conformal_suite.py stage_<...>` | JSONs in the stage dir |
+| MACC ladder, learned gate, APS/RAPS | `conformal_suite.py stage_<...>` | `micro_conformal_results.json`, `learned_gate_results.json`, `aps_raps_robustness.json` in the stage dir |
 | Cross-market transfer | `crossmarket_lf.py new deeplob tcn lob_transformer cnn_lstm_attention --flip` | `crossmarket_new_flip.json` |
 | Cross-market conformal | `crossmarket_conformal_flip.py` | `crossmarket_conformal_new_flip.json` |
-| Write `results/leakage_free/` | `write_results.py` | ten JSONs |
+| Write `results/leakage_free/` | `write_results.py` | eleven JSONs |
 
 `leaky_gaps.py` and `hmm_variants.py` are diagnostics. The first gives the per-regime coverage
 gaps on the leaky protocol; the second shows that the fold-9 HMM regime labels collapse.

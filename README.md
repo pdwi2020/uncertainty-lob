@@ -151,7 +151,7 @@ T4** runtimes; see `compute/KAGGLE_SETUP.md` and `compute/RUNPOD_SETUP.md`.
 Numeric outputs land in `results/`; the JSON/CSV files committed here are the
 numbers behind the paper's tables, and large tensors and checkpoints are not
 committed. The leakage-free numbers in `results/leakage_free/` come from the
-anchored runner in `compute/protocol_v2/`; the ten files recomputed after the
+anchored runner in `compute/protocol_v2/`; the eleven files written after the
 fold-9 retrains of 2026-11-11 come from `compute/protocol_v2/smokefix_20261111/`,
 whose README lists the steps.
 

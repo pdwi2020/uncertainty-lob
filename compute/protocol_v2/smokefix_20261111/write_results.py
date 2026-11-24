@@ -16,7 +16,7 @@ LABEL_MAPPING = ("Target labels (built as 2=up, 0=down) are mapped with y -> 2-y
                  "source models were trained on (raw 1=up, 3=down, i.e. class 0=up, 2=down). Earlier versions "
                  "of this file compared the two conventions unmapped, which swapped up and down.")
 CHANGED = ["table2_baseline", "conformal_logit_only", "selective_prediction", "deep_ensemble", "regime_conditional",
-           "regime_ts", "aci", "learned_gate_mondrian", "aps_raps", "crossmarket"]
+           "regime_ts", "aci", "learned_gate_mondrian", "aps_raps", "macc_ladder", "crossmarket"]
 
 core = json.load(open(HERE / "core_new.json"))
 reg = json.load(open(HERE / "regime_new.json"))
@@ -54,6 +54,10 @@ dump("learned_gate_mondrian", {"regime_rule": "v_ratio above its calibration-hal
                                "leaky_original_hmm": json.load(open(HERE / "stage_leaky_hmm" / "learned_gate_results.json")),
                                "note": NOTE})
 dump("aps_raps", {**json.load(open(st / "aps_raps_robustness.json")), "note": NOTE})
+# the full MACC-LOB conformal ladder (LAC, Tox-CF, LAC + Mondrian, ...) behind the supplement's ladder table
+dump("macc_ladder", {"regime_rule": "v_ratio above its calibration-half median (fold-9 validation)",
+                     "split": "q-hat fitted on the first half of the fold-9 validation split, coverage on the second",
+                     "models": json.load(open(st / "micro_conformal_results.json")), "note": NOTE})
 # target markets label 2=up; crossmarket_lf.py --flip maps them to the FI-2010 order (0=up)
 cm = json.load(open(HERE / "crossmarket_new_flip.json"))
 dump("crossmarket", {"protocol": "leakage_free_anchored_fold9_seed0", "n_windows_per_market": 50000,
