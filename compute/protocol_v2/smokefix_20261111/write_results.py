@@ -16,7 +16,7 @@ LABEL_MAPPING = ("Target labels (built as 2=up, 0=down) are mapped with y -> 2-y
                  "source models were trained on (raw 1=up, 3=down, i.e. class 0=up, 2=down). Earlier versions "
                  "of this file compared the two conventions unmapped, which swapped up and down.")
 CHANGED = ["table2_baseline", "conformal_logit_only", "selective_prediction", "deep_ensemble", "regime_conditional",
-           "regime_ts", "aci", "learned_gate_mondrian", "aps_raps", "macc_ladder", "crossmarket"]
+           "regime_ts", "aci", "learned_gate_mondrian", "aps_raps", "macc_ladder", "crossmarket", "significance"]
 
 core = json.load(open(HERE / "core_new.json"))
 reg = json.load(open(HERE / "regime_new.json"))
@@ -66,4 +66,6 @@ dump("crossmarket", {"protocol": "leakage_free_anchored_fold9_seed0", "n_windows
                      "conformal_lac_alpha0.10": {"method": "q-hat from first n_cal target windows, coverage on remainder",
                                                  "results": json.load(open(HERE / "crossmarket_conformal_new_flip.json"))},
                      "label_mapping": LABEL_MAPPING})
+# Wilcoxon + Holm for the baseline pairs and the EvLOB gate ablation (stats.py new)
+dump("significance", {**json.load(open(HERE / "significance_new.json")), "note": NOTE})
 print("written:", ", ".join(CHANGED))

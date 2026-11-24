@@ -1,0 +1,209 @@
+{
+  "test": "paired two-sided Wilcoxon over the 27 fold-seed runs at k=10, Holm within each family",
+  "baselines": [
+    {
+      "pair": "deeplob vs tcn",
+      "mean_diff_pp": -2.440503129338703,
+      "wins": 2,
+      "p": 3.084540367126465e-06,
+      "p_holm": 1.5422701835632324e-05
+    },
+    {
+      "pair": "deeplob vs lob_transformer",
+      "mean_diff_pp": -0.7346653558091377,
+      "wins": 9,
+      "p": 0.040983185172080994,
+      "p_holm": 0.12294955551624298
+    },
+    {
+      "pair": "deeplob vs lob_transformer_v2",
+      "mean_diff_pp": -2.5267537503722894,
+      "wins": 1,
+      "p": 6.407499313354492e-07,
+      "p_holm": 4.4852495193481445e-06
+    },
+    {
+      "pair": "deeplob vs cnn_lstm_attention",
+      "mean_diff_pp": 10.540175989822105,
+      "wins": 26,
+      "p": 2.9802322387695312e-08,
+      "p_holm": 2.682209014892578e-07
+    },
+    {
+      "pair": "deeplob vs rac_moe",
+      "mean_diff_pp": 9.87231566578739,
+      "wins": 24,
+      "p": 8.195638656616211e-07,
+      "p_holm": 4.9173831939697266e-06
+    },
+    {
+      "pair": "tcn vs lob_transformer",
+      "mean_diff_pp": 1.7058377735295653,
+      "wins": 22,
+      "p": 0.00018434226512908936,
+      "p_holm": 0.0007373690605163574
+    },
+    {
+      "pair": "tcn vs lob_transformer_v2",
+      "mean_diff_pp": -0.08625062103358636,
+      "wins": 16,
+      "p": 0.6276643574237823,
+      "p_holm": 0.6276643574237823
+    },
+    {
+      "pair": "tcn vs cnn_lstm_attention",
+      "mean_diff_pp": 12.98067911916081,
+      "wins": 27,
+      "p": 1.4901161193847656e-08,
+      "p_holm": 2.2351741790771484e-07
+    },
+    {
+      "pair": "tcn vs rac_moe",
+      "mean_diff_pp": 12.312818795126093,
+      "wins": 27,
+      "p": 1.4901161193847656e-08,
+      "p_holm": 2.2351741790771484e-07
+    },
+    {
+      "pair": "lob_transformer vs lob_transformer_v2",
+      "mean_diff_pp": -1.792088394563152,
+      "wins": 1,
+      "p": 2.086162567138672e-07,
+      "p_holm": 1.6689300537109375e-06
+    },
+    {
+      "pair": "lob_transformer vs cnn_lstm_attention",
+      "mean_diff_pp": 11.274841345631243,
+      "wins": 27,
+      "p": 1.4901161193847656e-08,
+      "p_holm": 2.2351741790771484e-07
+    },
+    {
+      "pair": "lob_transformer vs rac_moe",
+      "mean_diff_pp": 10.606981021596528,
+      "wins": 27,
+      "p": 1.4901161193847656e-08,
+      "p_holm": 2.2351741790771484e-07
+    },
+    {
+      "pair": "lob_transformer_v2 vs cnn_lstm_attention",
+      "mean_diff_pp": 13.066929740194395,
+      "wins": 27,
+      "p": 1.4901161193847656e-08,
+      "p_holm": 2.2351741790771484e-07
+    },
+    {
+      "pair": "lob_transformer_v2 vs rac_moe",
+      "mean_diff_pp": 12.39906941615968,
+      "wins": 27,
+      "p": 1.4901161193847656e-08,
+      "p_holm": 2.2351741790771484e-07
+    },
+    {
+      "pair": "cnn_lstm_attention vs rac_moe",
+      "mean_diff_pp": -0.6678603240347144,
+      "wins": 8,
+      "p": 0.10562613606452942,
+      "p_holm": 0.21125227212905884
+    }
+  ],
+  "evlob_gates": [
+    {
+      "pair": "corrected vs none",
+      "metric": "accuracy",
+      "mean_diff": 0.010355403025945028,
+      "better": 18,
+      "p": 0.14815247058868408,
+      "p_holm": 1.0
+    },
+    {
+      "pair": "corrected vs none",
+      "metric": "ece",
+      "mean_diff": -0.006981724907678587,
+      "better": 16,
+      "p": 0.1775200217962265,
+      "p_holm": 1.0
+    },
+    {
+      "pair": "corrected vs none",
+      "metric": "nll",
+      "mean_diff": -0.03026806866681134,
+      "better": 23,
+      "p": 6.660819053649902e-06,
+      "p_holm": 7.992982864379883e-05
+    },
+    {
+      "pair": "corrected vs none",
+      "metric": "error_auroc",
+      "mean_diff": 0.014820925977322444,
+      "better": 22,
+      "p": 0.00042723119258880615,
+      "p_holm": 0.004699543118476868
+    },
+    {
+      "pair": "corrected vs legacy",
+      "metric": "accuracy",
+      "mean_diff": 0.006690737273957994,
+      "better": 17,
+      "p": 0.09056484699249268,
+      "p_holm": 0.7245187759399414
+    },
+    {
+      "pair": "corrected vs legacy",
+      "metric": "ece",
+      "mean_diff": -0.006571724872898172,
+      "better": 15,
+      "p": 0.2483380287885666,
+      "p_holm": 1.0
+    },
+    {
+      "pair": "corrected vs legacy",
+      "metric": "nll",
+      "mean_diff": -0.020546133871431702,
+      "better": 23,
+      "p": 0.0018585771322250366,
+      "p_holm": 0.018585771322250366
+    },
+    {
+      "pair": "corrected vs legacy",
+      "metric": "error_auroc",
+      "mean_diff": 0.0075891268718999835,
+      "better": 22,
+      "p": 0.003247186541557312,
+      "p_holm": 0.029224678874015808
+    },
+    {
+      "pair": "legacy vs none",
+      "metric": "accuracy",
+      "mean_diff": 0.0036646657519870335,
+      "better": 11,
+      "p": 0.8407831341028214,
+      "p_holm": 1.0
+    },
+    {
+      "pair": "legacy vs none",
+      "metric": "ece",
+      "mean_diff": -0.000410000034780414,
+      "better": 16,
+      "p": 0.8593128323554993,
+      "p_holm": 1.0
+    },
+    {
+      "pair": "legacy vs none",
+      "metric": "nll",
+      "mean_diff": -0.009721934795379639,
+      "better": 13,
+      "p": 0.7139776796102524,
+      "p_holm": 1.0
+    },
+    {
+      "pair": "legacy vs none",
+      "metric": "error_auroc",
+      "mean_diff": 0.00723179910542246,
+      "better": 16,
+      "p": 0.2583710700273514,
+      "p_holm": 1.0
+    }
+  ],
+  "note": "Recomputed 2026-11-11 after retraining the fold-9 seed-0 tcn/lob_transformer/lob_transformer_v2/rac_moe runs, which had been 3-epoch smoke tests; scripts in X9 runs/protocol_v2_long_smokefix_20261111/"
+}
