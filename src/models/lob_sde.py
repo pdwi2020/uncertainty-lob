@@ -8,10 +8,11 @@ Architecture:
     z(0) = h_0 from CNN-LSTM encoder (same backbone as EvLOB)
     z(T) → classification head
 
-UQ quantities (N rollouts):
-  Predictive distribution: mean/std over {softmax(clf(z_i(T)))}
-  Aleatoric (per-sample):  mean variance = E[Var[p̂|x,W]]
-  Epistemic (per-sample):  path energy ∫||dz||²dt  (H¹ Sobolev norm)
+UQ quantities (N rollouts, see predict()):
+  Predictive distribution: mean over {softmax(clf(z_i(T)))}
+  Aleatoric (per-sample):  sum_k E_W[p̂_k (1 - p̂_k)] over the rollouts
+  Epistemic (per-sample):  sum_k Var_W[p̂_k] across the rollouts
+  Trajectory signal:       H¹ path energy ∫||dz/dt||²dt, reported separately
 
 Training:
   Fixed-step Euler-Maruyama (dt=0.05, T=1.0 → 20 steps) for speed + stability
@@ -22,7 +23,7 @@ Training:
   Call LOBSDETrainer.verify(loader) → {"stable": bool, "reason": str}
   If not stable, abort training and report honest negative.
 
-Reference: Li et al., ICML 2020 (arXiv:2001.01338); Kidger et al., NeurIPS 2020
+Reference: Li et al., AISTATS 2020 (arXiv:2001.01338); Kidger et al., NeurIPS 2020
 """
 
 import math
