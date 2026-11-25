@@ -1,0 +1,33 @@
+name: protocol_v2_smoke
+max_run_attempts: 2
+retry_backoff_seconds: 5
+
+defaults:
+  data_root: ${DL_PAPER_ROOT}/data/fi-2010
+  cache_root: ${DL_PAPER_ROOT}/cache/fi2010
+  runs_root: ${DL_PAPER_ROOT}/runs
+  require_cuda: true
+  resume: true
+  amp: true
+  sequence_length: 100
+  validation_fraction: 0.10
+  batch_size: 256
+  eval_batch_size: 512
+  num_workers: 0
+  epochs: 2
+  early_stopping_patience: 2
+  scheduler_patience: 1
+  learning_rate: 0.001
+  min_learning_rate: 0.000001
+  weight_decay: 0.0001
+  max_grad_norm: 1.0
+  horizon: 10
+  sample_limit: 20000
+
+phases:
+  - name: cuda_smoke
+    matrix:
+      model: [cnn_lstm_attention]
+      fold: [9]
+      seed: [0]
+      micro_mode: [none]

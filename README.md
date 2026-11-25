@@ -63,6 +63,7 @@ uncertainty-lob/
 │   ├── backtest/         #   market-making backtest (adverse-selection penalty)
 │   └── train.py
 ├── experiments/          # Self-contained drivers (training, calibration, conformal, UQ, ablations)
+├── protocol_v2/          # Anchored walk-forward campaign (workstation runs: DeepLOB, CNN-LSTM-Attn, EvLOB, LOB-SDE)
 ├── compute/              # Cloud-GPU runners + setup (Kaggle / RunPod / Colab)
 ├── configs/              # training / models / evaluation YAMLs
 ├── notebooks/            # Exploratory scaffolding (00–08)
@@ -146,14 +147,24 @@ python experiments/crossmarket_conformal.py
 python experiments/compute_lobsde_3seed.py
 ```
 
-GPU runs (Neural CDE / SDE, LOB-Transformer v2) were executed on free **Kaggle
-T4** runtimes; see `compute/KAGGLE_SETUP.md` and `compute/RUNPOD_SETUP.md`.
-Numeric outputs land in `results/`; the JSON/CSV files committed here are the
-numbers behind the paper's tables, and large tensors and checkpoints are not
-committed. The leakage-free numbers in `results/leakage_free/` come from the
-anchored runner in `compute/protocol_v2/`; the twelve files written after the
-fold-9 retrains of 2026-11-11 come from `compute/protocol_v2/smokefix_20261111/`,
-whose README lists the steps.
+The earlier-protocol GPU runs (Neural CDE / SDE, LOB-Transformer v2) were executed
+on free **Kaggle T4** runtimes; see `compute/KAGGLE_SETUP.md` and
+`compute/RUNPOD_SETUP.md`. Numeric outputs land in `results/`; the JSON/CSV files
+committed here are the numbers behind the paper's tables, and large tensors and
+checkpoints are not committed.
+
+The leakage-free numbers in `results/leakage_free/` come from one anchored
+walk-forward campaign, run in two places:
+
+- `protocol_v2/` trained DeepLOB, CNN-LSTM-Attention, EvLOB (gate, horizon and
+  objective studies) and LOB-SDE on a Quadro RTX 8000 workstation, 201 runs in all:
+  `python -m protocol_v2.campaign --config protocol_v2/config/campaign_long.yaml`
+  from the repository root (see `protocol_v2/README.md`).
+- `compute/protocol_v2/anchored_runner.py` trained TCN, LOBTransformer,
+  LOBTransformerV2 and RAC-MoE on Kaggle P100 GPUs.
+
+The twelve files written after the fold-9 retrains of 2026-11-11 come from
+`compute/protocol_v2/smokefix_20261111/`, whose README lists the steps.
 
 ## Citation
 

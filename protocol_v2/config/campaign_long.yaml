@@ -1,0 +1,79 @@
+name: protocol_v2_long
+max_run_attempts: 3
+retry_backoff_seconds: 15
+
+defaults:
+  data_root: ${DL_PAPER_ROOT}/data/fi-2010
+  cache_root: ${DL_PAPER_ROOT}/cache/fi2010
+  runs_root: ${DL_PAPER_ROOT}/runs
+  require_cuda: true
+  resume: true
+  amp: true
+  sequence_length: 100
+  validation_fraction: 0.10
+  batch_size: 256
+  eval_batch_size: 512
+  num_workers: 0
+  epochs: 80
+  early_stopping_patience: 12
+  scheduler_patience: 5
+  learning_rate: 0.0003
+  min_learning_rate: 0.000001
+  weight_decay: 0.0001
+  max_grad_norm: 1.0
+  horizon: 10
+  dropout: 0.2
+
+phases:
+  - name: anchored_references
+    matrix:
+      model: [cnn_lstm_attention, deeplob]
+      fold: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      seed: [0, 1, 2]
+      micro_mode: [none]
+
+  - name: gate_integrity
+    fixed:
+      model: evlob
+      loss_fn: bayes_risk
+      lambda_kl: 1.0
+    matrix:
+      fold: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      seed: [0, 1, 2]
+      micro_mode: [none, legacy, corrected]
+
+  - name: horizon_sensitivity
+    fixed:
+      model: evlob
+      fold: 9
+      loss_fn: bayes_risk
+      lambda_kl: 1.0
+    matrix:
+      horizon: [1, 2, 3, 5, 10]
+      seed: [0, 1, 2]
+      micro_mode: [none, corrected]
+
+  - name: objective_ablation
+    fixed:
+      model: evlob
+      fold: 9
+      horizon: 10
+      micro_mode: corrected
+    matrix:
+      seed: [0, 1, 2]
+      loss_fn: [bayes_risk, ce_warmup_bayes, uce]
+      lambda_kl: [0.1, 1.0]
+
+  - name: sde_sensitivity
+    fixed:
+      model: lob_sde
+      fold: 9
+      horizon: 10
+      epochs: 60
+      learning_rate: 0.0001
+      n_rollouts: 20
+      path_energy_beta: 0.0001
+    matrix:
+      seed: [0, 1, 2]
+      micro_mode: [none, corrected]
+      dt: [0.025, 0.05, 0.10]
